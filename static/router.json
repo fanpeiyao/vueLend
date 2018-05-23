@@ -1,0 +1,30 @@
+{
+        "zh-CN": [
+                {
+                        "name": "主页",
+                        "path": "/home"
+                },
+                {
+                        "name": "待开发",
+                        "href": "/paper"
+                },
+                {
+                        "name": "待开发2",
+                        "href": "/LendChain"
+                }
+        ],
+        "en-US": [
+                {
+                        "name": "Changelog",
+                        "path": "/changelog"
+                },
+                {
+                        "name": "White paper",
+                        "href": "/paper"
+                },
+                {
+                        "name": "LendChain",
+                        "href": "/LendChain"
+                }
+        ]
+}
