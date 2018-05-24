@@ -73,6 +73,12 @@ body, html {
     color: #333;
     -webkit-font-smoothing: antialiased;
 }
+.font-weight{
+    font-weight: normal;
+}
+.my-3{
+    margin: 3rem 0;
+}
 .text-center{
     text-align: center;
 }
@@ -89,5 +95,14 @@ body, html {
 }
 .text-white{
     color: #fff;
+}
+.module-title{
+    margin: 40px 0;
+}
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 768px) {
+    .module-title{
+        margin: 20px 0;
+    }
 }
 </style>

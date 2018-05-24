@@ -2,7 +2,7 @@
     <div class="header-vue">
         <div class="content">
             <div class="logo-box">
-                <img src="../assets/image/logo.png">
+                <img src="static/image/logo.png">
             </div>
             <div class="check-box">
                 <ul>
@@ -53,20 +53,9 @@ export default {
     },
     methods: {
         switchLang(targetLang) {
-
-            /* if ( this.lang === 'zh-CN' ) {
-                this.lang = 'en-US';
-                this.$i18n.locale = this.lang;//关键语句
-            }else {
-                this.lang = 'zh-CN';
-                this.$i18n.locale = this.lang;//关键语句
-            } */
-
             if (this.lang === targetLang) return;
             localStorage.setItem('ELEMENT_LANGUAGE', targetLang);
             this.$i18n.locale = targetLang;
-
-            // this.$router.push(this.$route.path.replace(this.lang, targetLang));
         },
         handleLangDropdownToggle(visible) {
             this.langDropdownVisible = visible;
@@ -102,7 +91,7 @@ export default {
 }
 .header-vue .content .check-box li .el-dropdown{
     padding: 2px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #999;
     border-radius: 20px;
 }
 .header-vue .content .check-box li  i{
