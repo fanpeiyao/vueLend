@@ -1,11 +1,13 @@
+
 <template>
     <div class="home">
-        <v-header></v-header>
-        <v-bottom></v-bottom>
+        <p>{{$t('m.hello')}}</p>
     </div>
 </template>
 
 <script>
+
+
 import vHeader from '@/components/header.vue'
 import vBottom from '@/components/bottom.vue'
 export default {

@@ -1,16 +1,16 @@
 <template>
     <div class="bottom-vue">
-            <h1 class=' text-center text-white'>Join Us</h1>
-            <ul>
-                <li  v-for="(item, key) in bottomList" :key="key">
-                    <a :href="item.path">
-                        <i class="iconfont" :class="item.icon"></i>
-                    </a>
-                </li>
-            </ul>
-            <div class="copyRight text-center text-white">
-                    Copyright © 2018 Lend Chain LTD.All Rights Reserved
-            </div>
+        <h1 class=' text-center text-white'>Join Us</h1>
+        <ul>
+            <li  v-for="(item, key) in bottomList" :key="key">
+                <a :href="item.path" target="blank">
+                    <i class="iconfont" :class="item.icon"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="copyRight text-center text-white">
+            Copyright © 2018 Lend Chain LTD.All Rights Reserved
+        </div>
     </div>
 </template>
 
@@ -21,12 +21,13 @@ export default {
         return {
             bottomList: [
                 {path:'',icon:'icon-msnui-computer'},
-                {path:'',icon:'icon-weibo1'},
+                {path:'https://weibo.com',icon:'icon-weibo1'},
                 {path:'',icon:'icon-wechat'},
                 {path:'',icon:'icon-facebook'},
                 {path:'',icon:'icon-twitter'},
                 {path:'',icon:'icon-emizhifeiji'},
-                {path:'',icon:'icon-msnui-computer'},
+                {path:'',icon:'icon-linkedin'},
+
             ],
 
         };
@@ -77,4 +78,9 @@ export default {
         font-size: 20px;
         color: #333;
     }
+
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 768px) {
+
+}
 </style>
