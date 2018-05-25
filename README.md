@@ -1,4 +1,4 @@
-# vueleon
+# vuelend
 
 > A Vue.js project
 
