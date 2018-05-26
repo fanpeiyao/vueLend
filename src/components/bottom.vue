@@ -16,72 +16,87 @@
 
 <script>
 export default {
-    name: 'bottom',
-    data() {
-        return {
-            bottomList: [
-                {path:'',icon:'icon-msnui-computer'},
-                {path:'https://weibo.com',icon:'icon-weibo1'},
-                {path:'',icon:'icon-wechat'},
-                {path:'',icon:'icon-facebook'},
-                {path:'',icon:'icon-twitter'},
-                {path:'',icon:'icon-emizhifeiji'},
-                {path:'',icon:'icon-linkedin'},
-
-            ],
-
-        };
-    },
-    computed: {
-
-
-    },
-    methods: {
-
-    },
-    created() {
-
-    }
-}
+  name: "bottom",
+  data() {
+    return {
+      bottomList: [
+        { path: "https://trade.lendx.vip", icon: "icon-msnui-computer" },
+        { path: "https://weibo.com", icon: "icon-weibo1" },
+        { path: "", icon: "icon-wechat" },
+        { path: "https://www.facebook.com/", icon: "icon-facebook" },
+        { path: "https://twitter.com/", icon: "icon-twitter" },
+        { path: "", icon: "icon-emizhifeiji" },
+        { path: "https://www.linkedin.com/", icon: "icon-linkedin" }
+      ]
+    };
+  },
+  computed: {},
+  methods: {},
+  created() {}
+};
 </script>
 
 <style scope>
-    .bottom-vue{
-        background: #12161f;
-    }
-    .bottom-vue h1{
-        font-size: 30px;
-        padding: 50px;
-        font-weight: normal;
-    }
-    .bottom-vue  .copyRight{
-        background: #161a24;
-        height:40px;
-        line-height:40px
-    }
-    .bottom-vue  ul{
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    .bottom-vue  ul li{
-        color:  #12161F;
-        margin-right: 40px;
-        height: 40px;
-        line-height:40px;
-        text-align: center;
-        width: 40px;
-        border-radius: 50%;
-        background: linear-gradient(45deg, #4E9AFF 0%,#4989FF 100%);
-    }
-    .bottom-vue  ul li i{
-        font-size: 20px;
-        color: #333;
-
-    }
-    
+.bottom-vue {
+  background: #12161f;
+  transition: all ease-out 0.3s;
+}
+.bottom-vue h1 {
+  font-size: 30px;
+  padding: 50px;
+  font-weight: normal;
+}
+.bottom-vue .copyRight {
+  background: #161a24;
+  height: 40px;
+  line-height: 40px;
+}
+.bottom-vue ul {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.bottom-vue ul li {
+  color: #12161f;
+  margin-right: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
+}
+.bottom-vue ul li i {
+  font-size: 20px;
+  color: #333;
+}
 /*屏幕宽度小于768px时*/
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 1000px) {
+  .bottom-vue ul {
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .bottom-vue ul li {
+    margin-right: 0;
+  }
+}
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 414px) {
+  .bottom-vue h1 {
+    padding: 40px 0;
+  }
+  .bottom-vue ul {
+    width: 90%;
+    margin: auto;
+  }
+  .bottom-vue ul li {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+  .bottom-vue ul li i {
+    font-size: 16px;
+  }
 }
 </style>

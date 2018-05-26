@@ -142,6 +142,7 @@ const en = {
             "h1":"Purchase Point Cards to get free LV tokens",
             "h2": "Purchase 1 Point cards to get 1 LV tokens",
             "h3": "Scale Starts",
+            "h3-end": "Scale End",
             "days": "Days",
             "hours": "Hours",
             "minuter": "Minuter",

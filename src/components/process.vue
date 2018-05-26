@@ -253,4 +253,17 @@ export default {
     display: block;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .plan .mobile .timeline .branch .content p {
+    margin: 0 0 5px;
+    width: 50%;
+  }
+  .plan .mobile .timeline .branch:nth-child(2n + 1) .content {
+    right: 243px;
+  }
+  .plan .mobile .timeline .branch:nth-child(2n + 1) .content:before {
+    left: 180px;
+  }
+}
 </style>

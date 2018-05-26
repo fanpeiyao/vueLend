@@ -34,107 +34,208 @@
             <div class="swiper-pagination" slot="pagination"></div>
         </div>
 
+
+        <div class='news-mobile'>
+            <swiper :options="swiperOption">
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new1.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new3.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new2.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new1.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new3.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new2.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new1.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new3.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+
+                </swiper-slide>
+                <swiper-slide>
+                    <el-card shadow="hover"  class='news-list'>
+                        <img src="static/image/new2.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
+                    </el-card>
+                </swiper-slide>
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+        </div>
+
     </div>
 </template>
 
 <script>
-
-
-
 export default {
-    data() {
-        return {
-            swiperOption: {
-                pagination: {
-                    el: '.swiper-pagination',
-                    //控制底部按钮点击切换
-                    clickable: true,
-                },
-                freeMode : false,
-                autoplay:false
-            },
-            imgList:[
-                'static/image/pro_1.png',
-                'static/image/pro_2.png',
-                'static/image/pro_3.png',
-            ]
-        }
-    },
-}
+  data() {
+    return {
+      swiperOption: {
+        pagination: {
+          el: ".swiper-pagination",
+          //控制底部按钮点击切换
+          clickable: true
+        },
+        freeMode: false,
+        autoplay: false
+      },
+      imgList: [
+        "static/image/pro_1.png",
+        "static/image/pro_2.png",
+        "static/image/pro_3.png"
+      ]
+    };
+  }
+};
 </script>
 
 <style>
-.news{
-    background: #fff;
-    padding-bottom:80px;
+.news {
+  background: #fff;
+  padding-bottom: 80px;
 }
-.news .news-slide{
-    width: 900px;
-    margin: auto;
-    position: relative;
+.news .news-slide {
+  width: 900px;
+  margin: auto;
+  position: relative;
 }
 
-.news .news-slide  .swiper-pagination-bullets {
-    bottom: -30px;
-    margin: auto;
-    left: 0;
-    right: 0;
+.news .news-slide .swiper-pagination-bullets {
+  bottom: -30px;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .news .news-slide .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 4px;
-    border: 1px solid #237eed;
-    background: #fff;
-    opacity: 0.6;
+  margin: 0 4px;
+  border: 1px solid #237eed;
+  background: #fff;
+  opacity: 0.6;
 }
 
-.news .news-slide .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background:  #237eed;
-    opacity: 1;
+.news
+  .news-slide
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #237eed;
+  opacity: 1;
 }
-.news .news-slide .swiper-slide{
-    display: flex;
-     padding: 10px 0;
-    justify-content: space-between;
+.news .news-slide .swiper-slide {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
 }
-.news .news-slide .news-list{
-    width:32%;
-    cursor: pointer;
-    background: #fff;
-
+.news .news-slide .news-list {
+  width: 32%;
+  cursor: pointer;
+  background: #fff;
 }
 .news .news-slide .news-list .el-card__body {
-    padding: 0;
+  padding: 0;
 }
-.news .news-slide .news-list img{
+.news .news-slide .news-list img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.news .news-slide .news-list p {
+  padding: 0 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  width: 100%;
+  word-wrap: break-word;
+  letter-spacing: 1px;
+}
+.news .news-slide .news-list span {
+  padding: 10px 20px;
+  color: #999;
+  display: block;
+}
+
+.news .news-mobile {
+  display: none;
+}
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 414px) {
+  .news .news-slide {
+    display: none;
+  }
+  .news .news-mobile {
+    display: block;
     width: 100%;
-    margin-bottom: 20px;
-}
-.news .news-slide .news-list p{
+  }
+  .news .news-mobile .el-card {
+    margin: auto;
+    width: 90%;
+  }
+
+  .news .news-mobile .el-card .el-card__body {
+    padding: 0;
+  }
+
+  .news .news-mobile .el-card .el-card__body img {
+    width: 100%;
+  }
+  .news .news-mobile .el-card__body p {
     padding: 0 20px;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #000;
     width: 100%;
     word-wrap: break-word;
     letter-spacing: 1px;
+  }
+  .news .news-mobile .el-card__body span {
+    padding: 10px 20px 30px;
+    color: #999;
+    display: block;
+  }
 }
-.news .news-slide .news-list span{
-    padding: 10px 20px;
-    color:#999;
-     display: block;
-}
-
-
-/*屏幕宽度小于768px时*/
-@media screen and (max-width: 1000px) {
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width: 768px) {
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width:414px) {
-}
-
 </style>

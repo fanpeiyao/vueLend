@@ -83,6 +83,7 @@ export default {
 .investors .investors-content .investors-list > div .img {
   height: 90px;
   width: 90px;
+  margin: auto;
   background: url("/static/image/app1.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -111,11 +112,20 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width: 768px) {
+  .investors .investors-content {
+    width: 90%;
+  }
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
+  .investors .investors-content {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .investors .investors-content .investors-list {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }
 </style>

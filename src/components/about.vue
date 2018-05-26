@@ -13,54 +13,62 @@
 </template>
 
 <script>
-
-
-
 export default {
-    data() {
-        return {
-
-        }
-    },
-}
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style scope>
-.about{
-    background:url(/static/image/bg_about.png) #fff repeat ;
-     background-size: cover;
+.about {
+  background: url(/static/image/bg_about.png) #fff repeat;
+  background-size: cover;
+  transition: all ease-out 0.3s;
 }
-.about .font-w600{
-    font-weight: 600;
+.about .font-w600 {
+  font-weight: 600;
 }
-.about .content{
+.about .content {
+  padding-bottom: 40px;
+  width: 846px;
+  min-height: 200px;
+  margin: auto;
+  position: relative;
+  padding-left: 215px;
+}
+.about .content img {
+  width: 120px;
+  position: absolute;
+  top: 70px;
+  left: 60px;
+}
+.content .content-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #262626;
+}
+
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 414px) {
+  .about .content {
     padding-bottom: 40px;
-    width: 846px;
+    width: 100%;
     min-height: 200px;
     margin: auto;
     position: relative;
-    padding-left: 215px;
-}
-.about .content img{
-    width: 120px;
-    position: absolute;
-    top: 70px;
-    left: 60px;
-}
-.content .content-text{
-
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #262626;
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width: 1000px) {
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width: 768px) {
-}
-/*屏幕宽度小于768px时*/
-@media screen and (max-width:414px) {
+    padding: 20px;
+  }
+  .about .content img {
+    width: 60px;
+    top: 28px;
+    left: 20px;
+  }
 }
 
+@media screen and (min-width: 375px) {
+  .about .content img {
+    display: none;
+  }
+}
 </style>

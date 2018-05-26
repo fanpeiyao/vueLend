@@ -16,16 +16,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            team:this.$t('m.advi.team')
-        }
-    },
-}
+  data() {
+    return {
+      team: this.$t("m.advi.team")
+    };
+  }
+};
 </script>
 
 <style scope>
-.advi{
-      background: #f2f2f2;
+.advi {
+  background: #f2f2f2;
+  transition: all ease-out 0.3s;
 }
 </style>

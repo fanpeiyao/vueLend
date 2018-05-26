@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-vue"  style="{background: 'url(static/image/banner.png) no-repeat top center;'}" >
+    <div class="banner-vue"  style="{background: 'url(static/image/banner.png) repeat-y top center;'}" >
         <div class="header-inner">
             <div class="contentBox">
                 <h1>{{$t('m.banner.h1')}}</h1>
@@ -129,281 +129,315 @@
 
 <script>
 export default {
-    name: 'banner',
-    data() {
-        return {
-            // <!-- 注册弹框 -->
-            dialogForm:false,
-            registerForm: {
-                email: '',
-                eth:''
-            },
-            // eth
-            dialogEth:false,
-            // email
-            dialogEmail: false,
-            emailForm: {
-                email: ''
-            },
-            endTime:null,
-            startTime:null,
-            nowTime:null,
-            scale:this.$t('m.banner.h3'),
-            days:null,
-            hours:null,
-            min:null,
-            secs:null
-
-
-        };
+  name: "banner",
+  data() {
+    return {
+      // <!-- 注册弹框 -->
+      dialogForm: false,
+      registerForm: {
+        email: "",
+        eth: ""
+      },
+      // eth
+      dialogEth: false,
+      // email
+      dialogEmail: false,
+      emailForm: {
+        email: ""
+      },
+      scale: this.$t("m.banner.h3"),
+      days: null,
+      hours: null,
+      min: null,
+      secs: null
+    };
+  },
+  computed: {},
+  methods: {
+    // <!-- 注册弹框 -->
+    handleClose(done) {
+      this.dialogForm = false;
     },
-    computed: {
+    //eth
+    handleCloseEth(done) {
+      this.dialogEth = false;
     },
-    methods: {
-        // <!-- 注册弹框 -->
-        handleClose(done) {
-            this.dialogForm = false
-        },
-        //eth
-        handleCloseEth(done) {
-            this.dialogEth = false
-        },
 
-        handleCloseEmail(done) {
-            this.dialogEmail = false
-        },
-        getCountDown(start,timestamp){
-            let that = this;
-            setInterval(function(){
-                var nowTime = new Date() ||  new Date(start * 1000);
-                var endTime = new Date(timestamp * 1000);
-                var t = endTime.getTime() - nowTime.getTime();
-                var d=Math.floor(t/1000/60/60/24);
-                var hour=Math.floor(t/1000/60/60%24);
-                var min=Math.floor(t/1000/60%60);
-                var sec=Math.floor(t/1000%60);
-                if (d < 10)  d = "0" + d;
-                if (hour < 10) hour = "0" + hour;
-                if (min < 10) min = "0" + min;
-                if (sec < 10) sec = "0" + sec;
-                that.days = d;
-                that.hours = hour;
-                that.min =min;
-                that.secs = sec;
-            },1000);
-        }
-
+    handleCloseEmail(done) {
+      this.dialogEmail = false;
     },
-    watch: {
-
-    },
-    created() {
-        window.onload = function (params) {
-            //dialog背景图片
-            document.getElementsByClassName('el-dialog__header')[0].classList.add("header-back");
-            if( document.getElementsByClassName('el-dialog__header').length>0){
-                for(let a of document.getElementsByClassName('el-dialog__header'))
-                    a.classList.add("header-back");
-            }
-        }
-
-        this.$ajax.post('https://trade.lendx.vip/website/time',{withCredentials:true}).then( res =>{
-           if(res.status == '200'){
-               let endTime = res.data.data.endTime;
-               let startTime = res.data.data.startTime;
-               let nowTime = res.data.data.nowTime;
-               if (nowTime < startTime ) {
-                   this.getCountDown(nowTime,startTime);
-               }else if(startTime  <= nowTime <= endTime){
-                   this.getCountDown(nowTime,endTime);
-               }else if(nowTime >= endTime){
-                    that.days = '00';
-                    that.hours = '00';
-                    that.min ='00';
-                    that.secs = '00';
-               }
-           }
-        }).catch(function(res){
-            console.log(res)
-        });
+    getCountDown(start, timestamp) {
+      let that = this;
+      setInterval(function() {
+        var nowTime = new Date() || new Date(start * 1000);
+        var endTime = new Date(timestamp * 1000);
+        var t = endTime.getTime() - nowTime.getTime();
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var hour = Math.floor((t / 1000 / 60 / 60) % 24);
+        var min = Math.floor((t / 1000 / 60) % 60);
+        var sec = Math.floor((t / 1000) % 60);
+        if (d < 10) d = "0" + d;
+        if (hour < 10) hour = "0" + hour;
+        if (min < 10) min = "0" + min;
+        if (sec < 10) sec = "0" + sec;
+        that.days = d;
+        that.hours = hour;
+        that.min = min;
+        that.secs = sec;
+      }, 1000);
     }
-}
+  },
+  watch: {},
+  created() {
+    window.onload = function(params) {
+      //dialog背景图片
+      document
+        .getElementsByClassName("el-dialog__header")[0]
+        .classList.add("header-back");
+      if (document.getElementsByClassName("el-dialog__header").length > 0) {
+        for (let a of document.getElementsByClassName("el-dialog__header"))
+          a.classList.add("header-back");
+      }
+    };
+
+    this.$ajax
+      .post("https://trade.lendx.vip/website/time", { withCredentials: true })
+      .then(res => {
+        if (res.status == "200") {
+          let endTime = res.data.data.endTime;
+          let startTime = res.data.data.startTime;
+          let nowTime = res.data.data.nowTime;
+          if (nowTime < startTime) {
+            this.getCountDown(nowTime, startTime);
+          } else if (startTime <= nowTime <= endTime) {
+            this.getCountDown(nowTime, endTime);
+          } else if (nowTime >= endTime) {
+            that.days = "00";
+            that.hours = "00";
+            that.min = "00";
+            that.secs = "00";
+            that.secs = "00";
+            that.scale = this.$t("m.banner.h3-end");
+          }
+        }
+      })
+      .catch(function(res) {
+        console.log(res);
+      });
+  }
+};
 </script>
 
 <style scope>
 .el-dialog__body {
-    padding: 30px 50px 10px;
+  padding: 30px 50px 10px;
 }
 
-.el-dialog__footer{
-    padding: 0 50px 40px;
+.el-dialog__footer {
+  padding: 0 50px 40px;
 }
 
-.oneButton .el-dialog__footer{
-    display: flex;
-    justify-content: center;
+.oneButton .el-dialog__footer {
+  display: flex;
+  justify-content: center;
 }
-.oneButton .el-dialog__footer button{
-    width:180px;
+.oneButton .el-dialog__footer button {
+  width: 180px;
 }
-.oneEmail  .el-dialog__footer .dialog-footer,.oneEmail  .el-dialog__footer  button{
-    width:100%;display: block;
+.oneEmail .el-dialog__footer .dialog-footer,
+.oneEmail .el-dialog__footer button {
+  width: 100%;
+  display: block;
 }
-.dialog-footer button{
-    width: 120px;
-     border-radius: 0;
+.dialog-footer button {
+  width: 120px;
+  border-radius: 0;
 }
-.dialog-footer button.el-button--default{
-    border:1px solid #a6a6a6;
-    float: left;
+.dialog-footer button.el-button--default {
+  border: 1px solid #a6a6a6;
+  float: left;
 }
-.dialog-footer button.el-button--primary{
-    background: linear-gradient(45deg, #4885FF 0%,#509FFF 100%);
+.dialog-footer button.el-button--primary {
+  background: linear-gradient(45deg, #4885ff 0%, #509fff 100%);
 }
 .el-dialog__headerbtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-.el-input input{
-    border-radius: 0;
-    background: #F5F5F5;
-    border: 1px solid #E5E5E5;
+.el-input input {
+  border-radius: 0;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
 }
-.banner-vue .header-inner{
-    backgroundSize:cover;
-    height: 600px;
+.banner-vue .header-inner {
+  backgroundsize: cover;
+  /* height: 600px; */
 }
-.banner-vue .header-inner{
-    position: relative;
-    width: 100%;
+.banner-vue .header-inner {
+  position: relative;
+  width: 100%;
 }
-.banner-vue .header-inner img{
-    width: 100%;
+.banner-vue .header-inner img {
+  width: 100%;
 }
-.banner-vue .header-inner .contentBox{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.banner-vue .header-inner .contentBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
-.banner-vue .header-inner .contentBox h1{
-    text-align: center;
-    font-size: 34px;
-    margin-top: 42px;
-    position: relative;
-    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from( #509eff), to(#3671e2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.banner-vue .header-inner .contentBox h1 {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 42px;
+  position: relative;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 bottom,
+    from(#509eff),
+    to(#3671e2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.banner-vue .header-inner .contentBox h2{
+.banner-vue .header-inner .contentBox h2 {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 25px;
+  color: #fff;
+}
+.banner-vue .header-inner .contentBox h3 {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 32px;
+  color: #fff;
+}
+.banner-vue .header-inner .contentBox .timeBox {
+  width: 330px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
 
-    font-weight: normal;
-    text-align: center;
-    margin-top: 25px;
-    color:#fff;
+.banner-vue .header-inner .contentBox .timeBox .block {
+  border-radius: 5px;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
 }
-.banner-vue .header-inner .contentBox h3{
-
-    font-weight: normal;
-    text-align: center;
-    margin-top: 32px;
-    color: #fff;
+.banner-vue .header-inner .contentBox .timeBox .block::after {
+  content: ":";
+  position: absolute;
+  font-size: 32px;
+  color: #fff;
+  right: -20px;
+  top: -5px;
+  font-weight: 600;
 }
-.banner-vue .header-inner .contentBox .timeBox{
-    width:330px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
+.banner-vue
+  .header-inner
+  .contentBox
+  .timeBox
+  .grid-content:nth-child(4)
+  .block:after {
+  content: "";
 }
-
-.banner-vue .header-inner .contentBox .timeBox .block{
-    border-radius: 5px;
-    text-align: center;
-    font-size: 32px;
-    color: #fff;
-    letter-spacing: 1px;
-    position: relative;
-    height:60px;width: 60px;
-    line-height: 60px;
-    background: linear-gradient(45deg,  #4886ff 0%,#509fff 100%);
-}
-.banner-vue .header-inner .contentBox .timeBox .block::after{
-    content: ":";
-    position: absolute;
-    font-size: 32px;
-    color: #fff          ;
-    right: -20px;
-    top: -5px;
-    font-weight: 600;
-}
-.banner-vue .header-inner .contentBox .timeBox .grid-content:nth-child(4) .block:after{
-    content: "";
-}
-.banner-vue .header-inner .contentBox .timeBox span{
-    text-align: center;
-    display: block;
-    margin-top: 2px;
-    color: #fff;
+.banner-vue .header-inner .contentBox .timeBox span {
+  text-align: center;
+  display: block;
+  margin-top: 2px;
+  color: #fff;
 }
 
 .banner-vue .header-inner .contentBox .buttonbox {
-    margin: auto;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 12px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 12px;
 }
-.banner-vue .header-inner .contentBox .buttonbox img{
-    margin: auto;
-    width: 230px;
-    cursor: pointer;
+.banner-vue .header-inner .contentBox .buttonbox img {
+  margin: auto;
+  width: 230px;
+  cursor: pointer;
 }
 .notics {
-    height: 200px;
-    width: 60%;
-    margin: auto;
-    text-align: left;
-    padding: 20px 0 0 0;
-    font-size: 12px;
-    color: #fff;
+  height: 200px;
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  padding: 20px 0 0 0;
+  font-size: 12px;
+  color: #fff;
 }
-.notics .title{
-    margin-bottom: 10px;
+.notics .title {
+  margin-bottom: 10px;
 }
-.notics li{
-    margin-bottom: 5px;
-    word-wrap: break-word;
-     line-height: 21px;
+.notics li {
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  line-height: 21px;
 }
- .header-back{
-    text-align: center;
-    padding: 30px;
-    background: url('/static/images/banner.png')
+.header-back {
+  text-align: center;
+  padding: 30px;
+  background: url("/static/images/banner.png");
 }
 
-.el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus{
-    border-color: #e5e5e5;
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: #e5e5e5;
 }
-.el-dialog{
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+.el-dialog {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 .el-dialog .el-dialog__title {
-    line-height: 24px;
-    font-size: 18px;
-    color: #fff;
-    width: 100%;
-    word-wrap: break-word;
+  line-height: 24px;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  word-wrap: break-word;
 }
-.el-dialog__headerbtn .el-dialog__close ,
-.el-dialog__headerbtn .el-dialog__close:hover{
-    color: #fff;
-    font-size: 18px;
+.el-dialog__headerbtn .el-dialog__close,
+.el-dialog__headerbtn .el-dialog__close:hover {
+  color: #fff;
+  font-size: 18px;
 }
 /*屏幕宽度小于768px时*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
+  .banner-vue .header-inner .contentBox h1,
+  .banner-vue .header-inner .contentBox h2,
+  .banner-vue .header-inner .contentBox h3,
+  .banner-vue .header-inner .contentBox .notics {
+    display: none;
+  }
 
+  .banner-vue .header-inner .contentBox .timeBox {
+
+      padding: 5% 10px 0;
+  }
+  .banner-vue .header-inner .contentBox .buttonbox {
+    margin-top: 12px;
+  }
+  .el-dialog{
+      width: 80%!important;
+  }
+}
+@media screen and (min-width: 375px){
+.banner-vue .header-inner .contentBox .buttonbox {
+    margin-top: 0;
+  }
 }
 </style>
