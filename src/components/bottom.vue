@@ -77,8 +77,9 @@ export default {
     .bottom-vue  ul li i{
         font-size: 20px;
         color: #333;
-    }
 
+    }
+    
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {
 

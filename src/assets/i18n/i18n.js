@@ -5,7 +5,7 @@ import messages from './lang'
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-    locale: localStorage.lang || 'zh-CN',
+    locale: localStorage.lang || 'en-US',
     messages,
 })
 locale.i18n((key, value) => i18n.t(key, value))

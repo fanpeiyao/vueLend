@@ -18,11 +18,6 @@
                     <el-card shadow="hover"  class='news-list'>
                             鼠标悬浮时显示
                     </el-card>
-                    <el-card shadow="hover"  class='news-list'>
-                            鼠标悬浮时显示
-                    </el-card>
-
-
                 </swiper-slide>
                 <swiper-slide>
 
@@ -51,6 +46,8 @@ export default {
             swiperOption: {
                 pagination: {
                     el: '.swiper-pagination',
+                    //控制底部按钮点击切换
+                    clickable: true,
                 },
                 freeMode : false,
                 autoplay:false
@@ -67,7 +64,7 @@ export default {
 
 <style>
 .news .news-slide{
-    width: 1000px;
+    width: 900px;
     margin: auto;
     margin-bottom: 80px;
     position: relative;
@@ -93,11 +90,11 @@ export default {
 }
 .news .news-slide .swiper-slide{
     display: flex;
-     padding: 10px;
+     padding: 10px 0;
     justify-content: space-between;
 }
 .news .news-slide .news-list{
-    width:24%;
+    width:31%;
     cursor: pointer;
     background: #fff;
 

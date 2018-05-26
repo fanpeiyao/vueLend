@@ -29,7 +29,10 @@ export default {
                 centeredSlides: true,
                 loop: true,
                 loopedSlides: 7,
+                //是否自动切换
                 autoplay: true,
+                //是否点击slide-item切换
+                slideToClickedSlide: true,
                 on: {
                     progress: function(progress) {
                         for (var i = 0; i < this.slides.length; i++) {
@@ -102,7 +105,9 @@ export default {
 	font-size: 1.1em;
 	margin: 0;
 }
-
+.projectShow{
+    background: #fff;
+}
 .projectShow>.pro-mobile{
     display: none;
 }

@@ -71,6 +71,7 @@ body, html {
     font-weight: 400;
     font-size: 14px;
     color: #333;
+    background: #f0f0f0;
     -webkit-font-smoothing: antialiased;
 }
 .font-weight{
@@ -97,7 +98,9 @@ body, html {
     color: #fff;
 }
 .module-title{
-    margin: 40px 0;
+    color: #262626;
+    padding: 40px 0;
+    font-size: 30px;
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {

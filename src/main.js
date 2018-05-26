@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import axios from 'axios'
 import router from './router'
 import ElementUI from 'element-ui';
 import i18n from '@/assets/i18n/i18n';
@@ -10,7 +11,8 @@ import 'swiper/dist/css/swiper.css'
 import 'element-ui/lib/theme-chalk/index.css';
 
 
-
+Vue.prototype.web = '/api'
+Vue.prototype.$ajax = axios
 
 import messages from './assets/i18n/lang'
 

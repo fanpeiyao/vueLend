@@ -18,6 +18,18 @@ const cn = {
         },
         "news": {
             "title": "项目展示"
+        },
+        "banner": {
+            "h1": "Purchase Point cards to get free LV tokens",
+            "h2": "Purchase 1 Point cards to get 1 LV tokens",
+            "h3": "Scale Starts",
+            "days": "Days",
+            "hours": "Hours",
+            "minuter": "Minuter",
+            "secs": "Secs",
+            "button": "button-cn",
+            "noticeTitle":""
+
         }
     }
 }

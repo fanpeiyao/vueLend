@@ -41,10 +41,10 @@ export default {
     },
     computed: {
         lang() {
-            return this.$i18n.locale || 'zh-CN';
+            return this.$i18n.locale || 'en-US';
         },
         displayedLang() {
-            return this.langs[this.lang] || '简体中文';
+            return this.langs[this.lang] || 'English';
         },
         langConfig() {
             return compoLang.filter(config => config.lang === this.lang)[0]['header'];
@@ -70,6 +70,7 @@ export default {
 .header-vue {
     height: 80px;
     width: 100%;
+    background: #fff;
 }
 .header-vue .content {
     height: 100%;
