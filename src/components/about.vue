@@ -27,7 +27,8 @@ export default {
 
 <style scope>
 .about{
-    background:url(/static/image/bg_about.png) #fff repeat left;
+    background:url(/static/image/bg_about.png) #fff repeat ;
+     background-size: cover;
 }
 .about .font-w600{
     font-weight: 600;

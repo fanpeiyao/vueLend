@@ -3,48 +3,12 @@
     <div class="team">
         <h1 class="text-center font-weight module-title">{{$t('m.team.title')}}</h1>
         <div class='team-list'>
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.ayi.name')}} </p>
-                <span>{{$t('m.team.ayi.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
+            <el-card shadow="hover"  v-for="(item, key) in team" :key="key">
+                <img :src='"static/image/"+item.img+".png"' class="image">
+                <p>{{item.name}} </p>
+                <span>{{item.job}}</span>
+                <div class="introduce">{{item.introduce}}</div>
             </el-card>
-
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.samuel.name')}} </p>
-                <span>{{$t('m.team.samuel.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
-            </el-card>
-
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.zhu.name')}} </p>
-                <span>{{$t('m.team.zhu.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
-            </el-card>
-
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.ayi.name')}} </p>
-                <span>{{$t('m.team.ayi.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
-            </el-card>
-
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.samuel.name')}} </p>
-                <span>{{$t('m.team.samuel.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
-            </el-card>
-
-            <el-card shadow="hover"  >
-                <img src="static/image/samuel.png" class="image">
-                <p>{{$t('m.team.zhu.name')}} </p>
-                <span>{{$t('m.team.zhu.job')}}</span>
-                <div class="introduce">{{$t('m.team.zhu.introduce')}}</div>
-            </el-card>
-
         </div>
 
     </div>
@@ -54,13 +18,18 @@
 export default {
     data() {
         return {
-
+            team:this.$t('m.team.team')
         }
     },
 }
 </script>
 
 <style scope>
+.team{
+
+      background: #fff;
+      padding-bottom: 30px;
+}
 .team .team-list {
     width: 900px;
     margin: auto;
@@ -114,10 +83,9 @@ export default {
     color:#999;
      display: block;
 }
-
-
 .team .team-list  .el-card:hover{
     color:#fff;
+     overflow: visible;
     background: linear-gradient(45deg,  #4886ff 0%,#509fff 100%);
 }
 .team .team-list  .el-card:hover .el-card__body {

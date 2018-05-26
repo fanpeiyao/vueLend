@@ -11,7 +11,8 @@ import 'swiper/dist/css/swiper.css'
 import 'element-ui/lib/theme-chalk/index.css';
 
 
-Vue.prototype.web = '/api'
+Vue.prototype.HOST = '/api'
+axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.prototype.$ajax = axios
 
 import messages from './assets/i18n/lang'

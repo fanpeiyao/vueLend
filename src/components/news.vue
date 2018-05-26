@@ -7,24 +7,25 @@
                 <swiper-slide>
 
                     <el-card shadow="hover"  class='news-list'>
-                        <img src="http://element-cn.eleme.io/static/hamburger.50e4091.png" class="image">
+                        <img src="static/image/new1.png" class="image">
                         <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
                         <span>102093-2-22</span>
                     </el-card>
 
                     <el-card shadow="hover"  class='news-list'>
-                            鼠标悬浮时显示
+                        <img src="static/image/new3.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
                     </el-card>
                     <el-card shadow="hover"  class='news-list'>
-                            鼠标悬浮时显示
+                        <img src="static/image/new2.png" class="image">
+                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
+                        <span>102093-2-22</span>
                     </el-card>
+
                 </swiper-slide>
                 <swiper-slide>
-
-                    <div class='news-list'>sssssssssssss</div>
-                    <div class='news-list'>ssssssssss</div>
-                    <div class='news-list'>ddddddddddd</div>
-                    <div class='news-list'>qqqqqqqqqqqqq</div>
+                    Slide 2
                 </swiper-slide>
                 <swiper-slide>Slide 3</swiper-slide>
 
@@ -63,10 +64,13 @@ export default {
 </script>
 
 <style>
+.news{
+    background: #fff;
+    padding-bottom:80px;
+}
 .news .news-slide{
     width: 900px;
     margin: auto;
-    margin-bottom: 80px;
     position: relative;
 }
 
@@ -94,7 +98,7 @@ export default {
     justify-content: space-between;
 }
 .news .news-slide .news-list{
-    width:31%;
+    width:32%;
     cursor: pointer;
     background: #fff;
 

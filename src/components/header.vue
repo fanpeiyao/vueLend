@@ -1,5 +1,6 @@
 <template>
     <div class="header-vue">
+        <!-- <img src="static/images/header.png" alt=""> -->
         <div class="content">
             <div class="logo-box">
                 <img src="static/image/logo.png">
@@ -67,8 +68,21 @@ export default {
   }
 </script>
 <style scope>
+.el-dropdown-menu{
+
+    background: #509FFF;
+    border: 0;
+    box-shadow: none;
+    color: #fff;
+}
+.el-popper[x-placement^=bottom] .popper__arrow,.el-popper[x-placement^=bottom] .popper__arrow::after{
+    display: none;
+}
+.el-dropdown-menu__item {
+    color: #fff;
+}
 .header-vue {
-    height: 80px;
+    height:50px;
     width: 100%;
     background: #fff;
 }
@@ -82,18 +96,20 @@ export default {
     justify-content: space-between;
 }
 .header-vue .content .logo-box>img{
-    height: 50px;
+    height: 33px;
     cursor: pointer;
 }
 .header-vue .content .check-box li{
     display: inline;
     cursor: pointer;
     margin-right: 30px;
+     font-size: 12px;
 }
 .header-vue .content .check-box li .el-dropdown{
     padding: 2px 10px;
     border: 1px solid #999;
     border-radius: 20px;
+     font-size: 12px;
 }
 .header-vue .content .check-box li  i{
      transition: .2s;

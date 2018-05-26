@@ -31,6 +31,15 @@ const en = {
                 1: "engine"
             },
         },
+        "flow": {
+            "title": "Flow Chart",
+            "borrower": "Borrower",
+            "smart": "Smart Contract",
+            "one":"Mortgage investment",
+            "three": "Funds to account",
+            "two":"Invest",
+            "investors":'Investors'
+        },
         "project": {
             "project": "Project Show"
         },
@@ -60,30 +69,74 @@ const en = {
                 }
             ]
         },
-
+        "Investors": {
+            "title": "Investors"
+        },
         "about": {
             "title": "About Lendchain",
             "content":" is a distributed digital assets platform, providing financing, investment, and insurance for assets holders. For financing, LendChain support mortgage and credit services covering major cryptocurrencies, including BTC, ETH, EOS, GXS etc. For investment, LendChain has professional analyst team to provide various products, including venture capital, quantitative fund, lending, and mining. LendChain chose GXChain as strategic partner, which has 1.4 million real name verified users, most of them have digital assets and could be vast customer resource of our products."
         },
         "team": {
-            "ayi": {
-                "name":"Ayi",
-                "job":'Founder CEO',
-                "introduce":""
-            },
-            "samuel": {
-                "name": "Samuel",
-                "job": 'Co-Founder Product Director'
-            },
-            "zhu": {
-                "name": "Zhu Xuyin",
-                "job": 'Architect',
-                "introduce": "Peacebird E-commerce project leader；Previously worked in Hangzhou SEPBO Technology；Leading the design of tens of millions of PV website system architecture；Thousands of QPS spike high concurrent scene experience；Deep Thinking on Internet Financial ；Architecture and Blockchain Technology"
-            },
-            "ayi": {
-                "name": "Ayi",
-                "job": 'Founder CEO'
-            },
+            "title":'Team',
+            "team":[
+                {
+                    "name": "Ayi",
+                    "img":"",
+                    "job": 'Founder CEO',
+                    "introduce": "Former Director of Commercial Media for 360 New Media Former Leo Co., Ltd. (Shanghai Stock Exchange 002131) WanSheng financial CEO Get to know virtual currency since 2013 Responsible for operating multiple virtual currency domestic communities from now and then"
+                },
+                {
+                    "name": "Samuel",
+                    "img": "",
+                    "job": 'Co-Founder Product Director',
+                    "introduce": "ormer co-founder of Zhuge Wallet QingLan financial Product Director;Netease Financial Product Manager Specialized in Internet finance for many years In - depth understanding of big data risk control"
+                },
+                {
+                    "name": "Zhu Xuyin",
+                    "job": 'Architect',
+                    "img": "zhu",
+                    "introduce": "Peacebird E-commerce project leader；Previously worked in Hangzhou SEPBO Technology；Leading the design of tens of millions of PV website system architecture；Thousands of QPS spike high concurrent scene experience；Deep Thinking on Internet Financial ；Architecture and Blockchain Technology"
+                }, {
+                    "name": "Mingyi",
+                    "img": "",
+                    "job": 'Software Engineer',
+                    "introduce": "Previously worked at Hang Seng Electronics Head of Commodity Module, Shanghai Petroleum Exchange Shanghai postage card storage module person in charge Served in the era of silver pass software Gold lease project leader Commodity project manager"
+                },
+                {
+                    "name": "Mohammad",
+                    "img": "",
+                    "job": 'Global Market Operations Expert',
+                    "introduce": "With his skills to develop, implement, track, Optimize the digital marketing campaigns and To handle the promotions of the company and Its products or services around the world across All digital channels."
+                }
+            ],
+
+        },
+        "advi": {
+            "title": 'Project Advisors',
+            "team": [
+                {
+                    "name": "Huang Minqiang",
+                    "img": "huang",
+                    "job": 'CEO of GXS Founder CEO',
+                    "introduce": "Minqiang has over 10 years’ experience in the field of data exchange and financial technology. He dived into cryptocurrency and blockchain since 2012 and initiated several projects. His expertise lies in the design of blockchain product economic models."
+                },
+                {
+                    "name": "Tu Guojun",
+                    "img": "tu",
+                    "job": 'GXS co-founder VP',
+                    "introduce": "Hunan University Bachelor of Computer Successively held senior management positions in three listed IT companies Created many technology companies and had more than 21 years of internet,Business experience in payments, information security, and health,Blockchain depth researcher"
+                },
+                {
+                    "name": "Ocean",
+                    "job": '',
+                    "img": "Ocean",
+                    "introduce": "Blockchain Senior Investors Digital Asset Fanatics Senior miner Continuous entrepreneurs"
+                }
+            ],
+
+        },
+        "news": {
+            "title": 'News'
         },
         "banner":{
             "h1":"Purchase Point Cards to get free LV tokens",
@@ -95,12 +148,12 @@ const en = {
             "secs": "Secs",
             "button": "button-en",
             "noticeTitle":'Participation Rules',
-            "rules1": "From June 15th-17th, Click “Participat",
-            "rules2": "dd"
+            "rules1": "1: From June 15th-17th, Click “Participate Now”, and input your email and ETH address (exchange address is not supported).Then send ETH to our crowd fund address to purchase point cards.Total points cards for sale: 100, 000, 000.",
+            "rules2": "2: After purchase, points card and LV tokens will be automatically load to your LendChain account."
             ,
-            "rules3": "dd"
+            "rules3": "3: Purchase 1 point cards can receive 1 LV token, which is the utility token on LendChain platform, the total supply of LV is 1, 000, 000, 000.This time we are going to send 100, 000, 000 LV to points card purchasers."
             ,
-            "rules4": "dd",
+            "rules4": "4: Maximum participation amount of ETH: 30",
             "registerModal":{
                 'title':'Get LV Tokens Now',
                 "placeholderEmail": "Email address",

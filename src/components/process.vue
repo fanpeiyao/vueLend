@@ -6,7 +6,7 @@
         <div class="web">
             <ol class="timeline">
                 <span class="time">{{$t('m.plan.year')}}</span>
-                <li v-for="(item, key) in timeline">
+                <li v-for="(item, key) in timeline" :key="key">
                     <p v-if="key != 2 && key!=4">{{item.thing}}</p>
                     <div v-else>
                         <div>{{item.thing}}</div>
@@ -23,37 +23,12 @@
                 <li class="time">
                     <div class="content">2018</div>
                 </li>
-                <li class="branch" v-for="(item, key) in timeline">
+                <li class="branch" v-for="(item, key) in timeline" :key="key">
                     <div class="content">
                     <p class="skin-color">{{item.time}} </p>
                     <p>{{item.thing}}</p>
                     </div>
                 </li>
-                <!-- <li class="branch">
-                    <div class="content">
-                    <p class="skin-color">asdsdf'v </p>
-                    <p>aa.</p>
-                    </div>
-                </li>
-                <li class="branch">
-                    <div class="content">
-                    <p class="skin-color">asdsdf'v </p>
-                    <p>aa.</p>
-                    </div>
-                </li>
-                <li class="branch">
-                    <div class="content">
-                    <p class="skin-color">asdsdf'v </p>
-                    <p>aa.</p>
-                    </div>
-                </li>
-
-                <li class="branch">
-                    <div class="content">
-                    <p class="skin-color">asdsdf'v </p>
-                    <p>aa.</p>
-                    </div>
-                </li> -->
             </ul>
         </div>
     </div>

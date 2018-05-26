@@ -4,27 +4,27 @@
             <div class="contentBox">
                 <h1>{{$t('m.banner.h1')}}</h1>
                 <h2>{{$t('m.banner.h2')}}</h2>
-                <h3>{{$t('m.banner.h3')}}</h3>
+                <h3>{{scale}}</h3>
                 <!-- 时间 -->
                 <div class='timeBox'>
                     <div class="grid-content">
                         <div class="block">
-                            09
+                            {{days}}
                         </div>
                         <span>{{$t('m.banner.days')}}</span>
                     </div>
                     <div class="grid-content">
                         <div class="block">
-                            23
+                            {{hours}}
                         </div>
                         <span>{{$t('m.banner.hours')}}</span>
                     </div>
                     <div class="grid-content">
-                        <div class="block"></div>
+                        <div class="block">{{min}}</div>
                         <span>{{$t('m.banner.minuter')}}</span>
                     </div>
                     <div class="grid-content">
-                        <div class="block"></div>
+                        <div class="block">{{secs}}</div>
                         <span>{{$t('m.banner.secs')}}</span>
                     </div>
                 </div>
@@ -145,13 +145,19 @@ export default {
             emailForm: {
                 email: ''
             },
-
+            endTime:null,
+            startTime:null,
+            nowTime:null,
+            scale:this.$t('m.banner.h3'),
+            days:null,
+            hours:null,
+            min:null,
+            secs:null
 
 
         };
     },
     computed: {
-
     },
     methods: {
         // <!-- 注册弹框 -->
@@ -166,9 +172,30 @@ export default {
         handleCloseEmail(done) {
             this.dialogEmail = false
         },
+        getCountDown(start,timestamp){
+            let that = this;
+            setInterval(function(){
+                var nowTime = new Date() ||  new Date(start * 1000);
+                var endTime = new Date(timestamp * 1000);
+                var t = endTime.getTime() - nowTime.getTime();
+                var d=Math.floor(t/1000/60/60/24);
+                var hour=Math.floor(t/1000/60/60%24);
+                var min=Math.floor(t/1000/60%60);
+                var sec=Math.floor(t/1000%60);
+                if (d < 10)  d = "0" + d;
+                if (hour < 10) hour = "0" + hour;
+                if (min < 10) min = "0" + min;
+                if (sec < 10) sec = "0" + sec;
+                that.days = d;
+                that.hours = hour;
+                that.min =min;
+                that.secs = sec;
+            },1000);
+        }
 
     },
     watch: {
+
     },
     created() {
         window.onload = function (params) {
@@ -180,11 +207,24 @@ export default {
             }
         }
 
-        var url = this.host+'/time'
-        this.$ajax.post(url).then(function(res){
-           console.log(res)
+        this.$ajax.post('https://trade.lendx.vip/website/time',{withCredentials:true}).then( res =>{
+           if(res.status == '200'){
+               let endTime = res.data.data.endTime;
+               let startTime = res.data.data.startTime;
+               let nowTime = res.data.data.nowTime;
+               if (nowTime < startTime ) {
+                   this.getCountDown(nowTime,startTime);
+               }else if(startTime  <= nowTime <= endTime){
+                   this.getCountDown(nowTime,endTime);
+               }else if(nowTime >= endTime){
+                    that.days = '00';
+                    that.hours = '00';
+                    that.min ='00';
+                    that.secs = '00';
+               }
+           }
         }).catch(function(res){
-            console.log(res);
+            console.log(res)
         });
     }
 }
@@ -320,7 +360,7 @@ export default {
 }
 .notics {
     height: 200px;
-    width: 52%;
+    width: 60%;
     margin: auto;
     text-align: left;
     padding: 20px 0 0 0;
@@ -334,22 +374,6 @@ export default {
     margin-bottom: 5px;
     word-wrap: break-word;
      line-height: 21px;
-}
-.notics li:nth-child(1)::before{
-    content: '1:';
-    margin-right:6px;
-}
-.notics li:nth-child(2)::before{
-    content: '2:';
-    margin-right:6px;
-}
-.notics li:nth-child(3)::before{
-    content: '3:';
-    margin-right:6px;
-}
-.notics li:nth-child(4)::before{
-    content: '4:';
-    margin-right:6px;
 }
  .header-back{
     text-align: center;
