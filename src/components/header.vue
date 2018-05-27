@@ -1,6 +1,5 @@
 <template>
     <div class="header-vue">
-        <!-- <img src="static/images/header.png" alt=""> -->
         <div class="content">
             <div class="logo-box">
                 <img src="static/image/logo.png" class="web-logo">

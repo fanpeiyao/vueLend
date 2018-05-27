@@ -3,37 +3,22 @@
     <div class="investors">
         <h1 class="text-center font-weight module-title">{{$t('m.Investors.title')}}</h1>
 
-
-        <div class='investors-content'>
-            <div  class='investors-list'>
-                <div>
-                    <div class="img"></div>
-                    <p>GXS</p>
-                </div>
-                <div class='gongxinbao'>
-                    公信宝
-                </div>
-            </div>
-
-            <div class='investors-list'>
-                <div>
-                    <div class="img"></div>
-                    <p>GXS</p>
-                </div>
-                <div class='gongxinbao'>
-                    公信宝
-                </div>
-            </div>
-            <div class='investors-list'>
-                <div>
-                    <div class="img"></div>
-                    <p>GXS</p>
-                </div>
-                <div class='gongxinbao'>
-                    公信宝
-                </div>
+        <div class='investors-content img_inv'>
+            <div  class='investors-list' v-for="(item,key) in 3" :key='key'>
+                <img src="static/image/gxb.png" alt="">
             </div>
         </div>
+        <!-- <div class='investors-content'>
+            <div  class='investors-list' v-for="(item,key) in 3" :key='key'>
+                <div>
+                    <div class="img"></div>
+                    <p>GXS</p>
+                </div>
+                <div class='gongxinbao'>
+                    公信宝
+                </div>
+            </div>
+        </div> -->
     </div>
 </template>
 
@@ -110,10 +95,21 @@ export default {
 .investors .investors-content .investors-list > div.gongxinbao {
   font-size: 28px;
 }
+
+.investors .investors-content.img_inv .investors-list {
+  padding: 0;
+}
+.img_inv img {
+  width: 100%;
+}
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {
   .investors .investors-content {
     width: 90%;
+  }
+
+  .investors .investors-content.img_inv .investors-list {
+    padding: 0;
   }
 }
 
@@ -131,6 +127,10 @@ export default {
   .investors .investors-content .investors-list > div.gongxinbao {
     font-size: 24px;
   }
+
+  .investors .investors-content.img_inv .investors-list {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 414px) {
   .investors .investors-content {
@@ -141,6 +141,10 @@ export default {
   .investors .investors-content .investors-list {
     width: 80%;
     margin-bottom: 20px;
+  }
+
+  .investors .investors-content.img_inv .investors-list {
+    padding: 0;
   }
 }
 </style>

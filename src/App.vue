@@ -145,9 +145,7 @@ html {
   font-weight: 400;
   font-size: 14px;
   color: #333;
-  overflow-x: hidden;
   background: #f0f0f0;
-  -webkit-font-smoothing: antialiased;
 }
 .font-weight {
   font-weight: normal;

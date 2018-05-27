@@ -64,11 +64,17 @@ export default {
   text-align: center;
   width: 40px;
   border-radius: 50%;
+    transition: .6s ease;
   background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
 }
 .bottom-vue ul li i {
   font-size: 20px;
   color: #333;
+
+}
+.bottom-vue ul li:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {

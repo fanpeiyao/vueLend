@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-vue"  style="{background: 'url(static/image/banner.png) repeat-y top center;'}" >
+    <div class="banner-vue">
         <div class="header-inner">
             <div class="contentBox">
                 <h1>{{$t('m.banner.h1')}}</h1>
@@ -123,7 +123,6 @@
                 <el-button type="primary" @click="dialogEmail = false">{{this.$t("m.banner.confirm")}}</el-button>
             </span>
         </el-dialog>
-
     </div>
 </template>
 
@@ -232,11 +231,9 @@ export default {
 .el-dialog__body {
   padding: 30px 50px 10px;
 }
-
 .el-dialog__footer {
   padding: 0 50px 40px;
 }
-
 .oneButton .el-dialog__footer {
   display: flex;
   justify-content: center;
@@ -270,9 +267,11 @@ export default {
   background: #f5f5f5;
   border: 1px solid #e5e5e5;
 }
-.banner-vue .header-inner {
-  backgroundsize: cover;
-  /* height: 600px; */
+.banner-vue {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("/static/image/banner.png");
+  background-size: cover;
 }
 .banner-vue .header-inner {
   position: relative;
@@ -280,6 +279,10 @@ export default {
 }
 .banner-vue .header-inner img {
   width: 100%;
+}
+
+.banner-vue .header-inner > img {
+  opacity: 0;
 }
 .banner-vue .header-inner .contentBox {
   width: 100%;
@@ -289,8 +292,13 @@ export default {
 .banner-vue .header-inner .contentBox h1 {
   text-align: center;
   font-size: 34px;
-  margin-top:30px;
+  margin-top: 30px;
   position: relative;
+
+  -webkit-animation: fade-in-down 0.6s;
+  animation: fade-in-down 0.6s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
   background-image: -webkit-gradient(
     linear,
     0 0,
@@ -301,6 +309,31 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 .banner-vue .header-inner .contentBox h2 {
   font-weight: normal;
   text-align: center;
@@ -378,10 +411,10 @@ export default {
 }
 .notics .title {
   margin-bottom: 10px;
-  color: #509FFF;
+  color: #509fff;
 }
 .notics li {
-     font-size: 11px;
+  font-size: 11px;
   margin-bottom: 5px;
   word-wrap: break-word;
   line-height: 21px;
@@ -389,7 +422,7 @@ export default {
 .header-back {
   text-align: center;
   padding: 30px;
-  background: url("/static/images/banner.png");
+  background: url("/static/image/banner.png");
 }
 
 .el-form-item.is-success .el-input__inner,
@@ -418,26 +451,26 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .banner-vue .header-inner .contentBox .notics {
     display: none;
   }
-.banner-vue .header-inner .contentBox h1 {
+  .banner-vue .header-inner .contentBox h1 {
     font-size: 30px;
-     margin-top: 30px;
-}
-.banner-vue .header-inner .contentBox h2,.banner-vue .header-inner .contentBox h3 {
-    margin-top:10px;
-}
+    margin-top: 30px;
+  }
+  .banner-vue .header-inner .contentBox h2,
+  .banner-vue .header-inner .contentBox h3 {
+    margin-top: 10px;
+  }
   .banner-vue .header-inner .contentBox .timeBox {
-
-      padding:10px 0 0;
+    padding: 10px 0 0;
   }
   .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 12px;
   }
-  .el-dialog{
-      width: 60%!important;
+  .el-dialog {
+    width: 60% !important;
   }
 }
 
@@ -450,19 +483,18 @@ export default {
   }
 
   .banner-vue .header-inner .contentBox .timeBox {
-
-      padding: 5% 10px 0;
+    padding: 5% 10px 0;
   }
   .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 12px;
   }
-  .el-dialog{
-      width: 80%!important;
+  .el-dialog {
+    width: 80% !important;
   }
 }
 
-@media screen and (max-width: 400px){
-.banner-vue .header-inner .contentBox .buttonbox {
+@media screen and (max-width: 400px) {
+  .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 0;
   }
 }
