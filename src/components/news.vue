@@ -36,7 +36,7 @@
 
 
         <div class='news-mobile'>
-            <swiper :options="swiperOption">
+            <swiper :options="swiperOption2">
                 <swiper-slide>
                     <el-card shadow="hover"  class='news-list'>
                         <img src="static/image/new1.png" class="image">
@@ -123,6 +123,15 @@ export default {
         freeMode: false,
         autoplay: false
       },
+      swiperOption2: {
+        pagination: {
+          el: ".swiper-pagination",
+          //控制底部按钮点击切换
+          clickable: true
+        },
+        freeMode: false,
+        autoplay: false
+      },
       imgList: [
         "static/image/pro_1.png",
         "static/image/pro_2.png",
@@ -201,6 +210,14 @@ export default {
 .news .news-mobile {
   display: none;
 }
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 900px) {
+.news .news-slide {
+    width: 100%;
+    padding: 0 10px;
+}
+}
+
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
   .news .news-slide {

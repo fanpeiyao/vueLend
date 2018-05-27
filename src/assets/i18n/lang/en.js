@@ -81,13 +81,13 @@ const en = {
             "team":[
                 {
                     "name": "Ayi",
-                    "img":"",
+                    "img":"ayi",
                     "job": 'Founder CEO',
                     "introduce": "Former Director of Commercial Media for 360 New Media Former Leo Co., Ltd. (Shanghai Stock Exchange 002131) WanSheng financial CEO Get to know virtual currency since 2013 Responsible for operating multiple virtual currency domestic communities from now and then"
                 },
                 {
                     "name": "Samuel",
-                    "img": "",
+                    "img": "samuel",
                     "job": 'Co-Founder Product Director',
                     "introduce": "ormer co-founder of Zhuge Wallet QingLan financial Product Director;Netease Financial Product Manager Specialized in Internet finance for many years In - depth understanding of big data risk control"
                 },
@@ -98,13 +98,13 @@ const en = {
                     "introduce": "Peacebird E-commerce project leader；Previously worked in Hangzhou SEPBO Technology；Leading the design of tens of millions of PV website system architecture；Thousands of QPS spike high concurrent scene experience；Deep Thinking on Internet Financial ；Architecture and Blockchain Technology"
                 }, {
                     "name": "Mingyi",
-                    "img": "",
+                    "img": "ming",
                     "job": 'Software Engineer',
                     "introduce": "Previously worked at Hang Seng Electronics Head of Commodity Module, Shanghai Petroleum Exchange Shanghai postage card storage module person in charge Served in the era of silver pass software Gold lease project leader Commodity project manager"
                 },
                 {
                     "name": "Mohammad",
-                    "img": "",
+                    "img": "mohammad",
                     "job": 'Global Market Operations Expert',
                     "introduce": "With his skills to develop, implement, track, Optimize the digital marketing campaigns and To handle the promotions of the company and Its products or services around the world across All digital channels."
                 }

@@ -50,6 +50,23 @@ export default {
 }
 
 /*屏幕宽度小于768px时*/
+@media screen and (max-width: 768px) {
+  .about .content {
+    padding-bottom: 40px;
+    width: 100%;
+    min-height: 200px;
+    margin: auto;
+    position: relative;
+    padding: 20px;
+  }
+  .about .content img {
+    width: 60px;
+    top: 28px;
+    left: 20px;
+    display: block;
+  }
+}
+/*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
   .about .content {
     padding-bottom: 40px;
@@ -63,10 +80,11 @@ export default {
     width: 60px;
     top: 28px;
     left: 20px;
+    display: block;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 400px) {
   .about .content img {
     display: none;
   }

@@ -10,6 +10,9 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
+
+# 打包部署
+npm run bulid
 ```
 ## 项目结构
 

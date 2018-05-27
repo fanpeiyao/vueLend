@@ -289,7 +289,7 @@ export default {
 .banner-vue .header-inner .contentBox h1 {
   text-align: center;
   font-size: 34px;
-  margin-top: 42px;
+  margin-top:30px;
   position: relative;
   background-image: -webkit-gradient(
     linear,
@@ -304,13 +304,13 @@ export default {
 .banner-vue .header-inner .contentBox h2 {
   font-weight: normal;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
   color: #fff;
 }
 .banner-vue .header-inner .contentBox h3 {
   font-weight: normal;
   text-align: center;
-  margin-top: 32px;
+  margin-top: 15px;
   color: #fff;
 }
 .banner-vue .header-inner .contentBox .timeBox {
@@ -361,7 +361,6 @@ export default {
   margin: auto;
   text-align: center;
   cursor: pointer;
-  margin-top: 12px;
 }
 .banner-vue .header-inner .contentBox .buttonbox img {
   margin: auto;
@@ -379,8 +378,10 @@ export default {
 }
 .notics .title {
   margin-bottom: 10px;
+  color: #509FFF;
 }
 .notics li {
+     font-size: 11px;
   margin-bottom: 5px;
   word-wrap: break-word;
   line-height: 21px;
@@ -416,6 +417,30 @@ export default {
   font-size: 18px;
 }
 /*屏幕宽度小于768px时*/
+
+@media screen and (max-width: 1000px){
+  .banner-vue .header-inner .contentBox .notics {
+    display: none;
+  }
+.banner-vue .header-inner .contentBox h1 {
+    font-size: 30px;
+     margin-top: 30px;
+}
+.banner-vue .header-inner .contentBox h2,.banner-vue .header-inner .contentBox h3 {
+    margin-top:10px;
+}
+  .banner-vue .header-inner .contentBox .timeBox {
+
+      padding:10px 0 0;
+  }
+  .banner-vue .header-inner .contentBox .buttonbox {
+    margin-top: 12px;
+  }
+  .el-dialog{
+      width: 60%!important;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .banner-vue .header-inner .contentBox h1,
   .banner-vue .header-inner .contentBox h2,
@@ -435,7 +460,8 @@ export default {
       width: 80%!important;
   }
 }
-@media screen and (min-width: 375px){
+
+@media screen and (max-width: 400px){
 .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 0;
   }

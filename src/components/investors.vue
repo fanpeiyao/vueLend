@@ -68,7 +68,7 @@ export default {
 }
 .investors .investors-content .investors-list {
   width: 30%;
-  padding: 10px 40px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -116,7 +116,22 @@ export default {
     width: 90%;
   }
 }
+
 /*屏幕宽度小于768px时*/
+
+@media screen and (max-width: 768px) {
+  .investors .investors-content .investors-list {
+    width: 30%;
+    padding: 10px;
+  }
+  .investors .investors-content .investors-list > div .img {
+    width: 60px;
+    height: 60px;
+  }
+  .investors .investors-content .investors-list > div.gongxinbao {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 414px) {
   .investors .investors-content {
     width: 100%;

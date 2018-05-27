@@ -67,7 +67,6 @@ export default {
   width: 62px;
   margin-bottom: 20px;
 }
-
 .Application ul li em {
   background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
   height: 2px;
@@ -77,20 +76,19 @@ export default {
   margin: 15px auto 0;
 }
 @media screen and (max-width: 1000px) {
-    .Application ul {
-        width: 80%;
-        margin: auto;
-    }
+  .Application ul {
+    width: 80%;
+    margin: auto;
+  }
 }
 @media screen and (max-width: 414px) {
-    .Application ul {
+  .Application ul {
     width: 100%;
-     justify-content: space-around;
-}
+    justify-content: space-around;
+  }
 
-.Application ul li{
-
-      width: 17%;
-}
+  .Application ul li {
+    width: 17%;
+  }
 }
 </style>

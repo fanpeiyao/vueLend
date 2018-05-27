@@ -8,9 +8,9 @@
             </div>
             <div class="check-box">
                 <ul>
-                    <li>{{$t('m.header.home')}}</li>
-                    <li>{{$t('m.header.whitePaper')}}</li>
-                    <li>{{$t('m.header.lendChain')}}</li>
+                    <li class="a">{{$t('m.header.home')}}</li>
+                    <li  class="a"><a href="http://">{{$t('m.header.whitePaper')}}</a></li>
+                    <li class="a"><a href="http://">{{$t('m.header.lendChain')}}</a></li>
                     <li>
                         <el-dropdown  trigger="click"    :class="{ 'is-active': langDropdownVisible  }">
                             <span class="el-dropdown-link">
@@ -106,6 +106,15 @@ export default {
   margin-right: 30px;
   font-size: 12px;
 }
+
+.header-vue .content .check-box li.a {
+     position: relative;
+}
+
+.header-vue .content .check-box li.a >a {
+     color: #333;
+}
+
 .header-vue .content .check-box li .el-dropdown {
   padding: 2px 10px;
   border: 1px solid #999;
@@ -122,9 +131,31 @@ export default {
 .header-vue .content .check-box li:hover,
 .header-vue .content .check-box li:hover span,
 .header-vue .content .check-box li > .el-dropdown.is-active i,
-.header-vue .content .check-box li > .el-dropdown:hover {
+.header-vue .content .check-box li > .el-dropdown:hover,
+.header-vue .content .check-box li.a:hover >a{
   color: #409eff;
 }
+
+
+.header-vue .content .check-box li.a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+     bottom: -3px;
+  height: 2px;
+  background: #409eff;
+  transform: scaleX(0);
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+
+}
+.header-vue .content .check-box li.a:hover:before {
+  transform: scaleX(1);
+}
+
+
+
 .header-vue .el-dropdown {
   color: #333;
 }
