@@ -96,7 +96,7 @@ export default {
   position: absolute;
   top: -15px;
   right: -85px;
-    z-index: 2;
+  z-index: 2;
 }
 .flow .flow-content .flow-list .node3 {
   right: -68px;
@@ -126,37 +126,48 @@ export default {
 
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {
-    .flow .flow-content {
-        width: 100%;
-    }
-    .flow .flow-content .flow-list:nth-child(1) .arrow2 {
-        width: 60px;
-        right: -127px;
-        top: -48px;
-    }
-    .flow .flow-content .flow-list .arrow {
-        width: 60px;
-    }
+  .flow .flow-content {
+    width: 100%;
+  }
+  .flow .flow-content .flow-list:nth-child(1) .arrow2 {
+    width: 60px;
+    right: -127px;
+    top: -48px;
+  }
+  .flow .flow-content .flow-list .arrow {
+    width: 60px;
+  }
 
-    .flow .flow-content .flow-list .arrow {
-        top: -20px;
-        right: -136px;
-    }
-    .flow .flow-content em {
-        height: 10px;
-        width: 10px;
-        font-size: 8px;
-    }
-    .flow .flow-content .node span {
-        font-size: 6px;
-    }
-    .flow .flow-content .flow-list .node2 {
-            top: 18px;
+  .flow .flow-content .flow-list .arrow {
+    top: -20px;
+    right: -136px;
+  }
+  .flow .flow-content em {
+    height: 10px;
+    width: 10px;
+    font-size: 8px;
+  }
+  .flow .flow-content .node span {
+    font-size: 6px;
+  }
+  .flow .flow-content .flow-list .node2 {
+    top: 18px;
     right: -30px;
-    }
-.flow .flow-content .flow-list .node1 {
+  }
+  .flow .flow-content .flow-list .node1 {
     top: -13px;
     right: -70px;
+  }
 }
+
+/*屏幕宽度小于768px时*/
+@media screen and (max-width: 400px) {
+  .flow .flow-content .flow-list .node1 {
+    right: -55px;
+  }
+
+  .flow .flow-content .flow-list .node3 {
+    right: -48px;
+  }
 }
 </style>

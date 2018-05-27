@@ -144,6 +144,7 @@ html {
   font-family: Microsoft YaHei;
   font-weight: 400;
   font-size: 14px;
+  /* overflow-x: hidden; */
   color: #333;
   background: #f0f0f0;
 }
@@ -174,6 +175,9 @@ html {
   color: #262626;
   padding: 40px 0;
   font-size: 30px;
+}
+.home{
+    overflow: hidden;
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {

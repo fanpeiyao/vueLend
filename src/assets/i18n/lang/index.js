@@ -1,7 +1,7 @@
 
 import en from './en';
-import zh from './zh';
+import ch from './ch';
 export default {
-    'zh-CN': zh,
-    'en-US': en
+    'ch': ch,
+    'en': en
 }

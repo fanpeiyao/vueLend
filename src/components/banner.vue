@@ -37,11 +37,10 @@
                     <!-- @click="dialogForm = true" -->
                     <!-- eth -->
                     <!-- @click="dialogEth = true" -->
+<!-- dialogEmail = true -->
 
 
-
-
-                    <el-button type="text" @click="dialogEmail = true"><img :src='"static/image/"+$t("m.banner.button")+".png"' alt=""></el-button>
+                    <el-button type="text" @click="getToken(dialog)"><img :src='"static/image/"+$t("m.banner.button")+".png"' alt=""></el-button>
                 </div>
                 <div class="notics">
                     <p class="title">{{$t("m.banner.noticeTitle")}}</p>
@@ -80,11 +79,13 @@
                 <el-form-item prop="eth">
                     <el-input v-model="registerForm.eth" :placeholder='this.$t("m.banner.registerModal.placeholderEth")'></el-input>
                 </el-form-item>
-
+                    <div class="return__error" v-if="returnReg_msg">
+                        {{returnReg_msg}}
+                    </div>
             </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogForm = false">{{this.$t("m.banner.cancel")}}</el-button>
-                <el-button type="primary" @click="dialogForm = false">{{this.$t("m.banner.confirm")}}</el-button>
+                <el-button type="primary" @click="register">{{this.$t("m.banner.confirm")}}</el-button>
             </span>
         </el-dialog>
 
@@ -95,7 +96,7 @@
         :visible.sync="dialogEth"
         width="30%"
         :before-close="handleCloseEth">
-            <div class='text-center' style="margin-bottom: 18px;">sssssssssssssssssss</div>
+            <div class='text-center' style="margin-bottom: 18px;">{{eth}}</div>
             <span slot="footer" class="dialog-footer">
                 <el-button type="primary" @click="dialogEth = false">{{this.$t("m.banner.confirm")}}</el-button>
             </span>
@@ -117,10 +118,13 @@
                     ]"
                 >
                     <el-input v-model="emailForm.email" :placeholder='this.$t("m.banner.confirmEmail.placeholderEmail")'></el-input>
+                    <div class="return__error" v-if="returnMessage">
+                        {{returnMessage}}
+                    </div>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="dialogEmail = false">{{this.$t("m.banner.confirm")}}</el-button>
+                <el-button type="primary" @click="emailConfirm">{{this.$t("m.banner.confirm")}}</el-button>
             </span>
         </el-dialog>
     </div>
@@ -137,8 +141,10 @@ export default {
         email: "",
         eth: ""
       },
+      returnReg_msg: null,
       // eth
       dialogEth: false,
+      eth: null,
       // email
       dialogEmail: false,
       emailForm: {
@@ -148,7 +154,9 @@ export default {
       days: null,
       hours: null,
       min: null,
-      secs: null
+      secs: null,
+      dialog: null,
+      returnMessage: null
     };
   },
   computed: {},
@@ -184,6 +192,47 @@ export default {
         that.min = min;
         that.secs = sec;
       }, 1000);
+    },
+    getToken(n) {
+      this[n] = true;
+    },
+
+    emailConfirm() {
+      var params = {
+        email: this.emailForm.email,
+        language: this.$i18n.locale
+      };
+      this.$ajax
+        .post("https://trade.lendx.vip/website/appoint", params)
+        .then(res => {
+          if (res.data.code == "2000") {
+            this.dialogEmail = false;
+            this.eth = res.data.message;
+            this.dialogEth = true;
+          } else {
+            this.returnMessage = res.data.message;
+          }
+        });
+    },
+    register() {
+      var params = {
+        email: this.registerForm.email,
+        address: this.registerForm.eth,
+        language: this.$i18n.locale
+      };
+      this.$ajax
+        .post("https://trade.lendx.vip/website/join", params)
+        .then(res => {
+          if (res.data.code == "2000") {
+            this.dialogForm = false;
+            this.$message({
+              type: "info",
+              message: res.data.message
+            });
+          } else {
+            this.returnReg_msg = res.data.message;
+          }
+        });
     }
   },
   watch: {},
@@ -200,7 +249,7 @@ export default {
     };
 
     this.$ajax
-      .post("https://trade.lendx.vip/website/time", { withCredentials: true })
+      .post("https://trade.lendx.vip/website/time")
       .then(res => {
         if (res.status == "200") {
           let endTime = res.data.data.endTime;
@@ -208,8 +257,12 @@ export default {
           let nowTime = res.data.data.nowTime;
           if (nowTime < startTime) {
             this.getCountDown(nowTime, startTime);
+            //不是活动时间展示一个email框
+            this.dialog = "dialogEmail";
           } else if (startTime <= nowTime <= endTime) {
             this.getCountDown(nowTime, endTime);
+            //活动时间展示注册框
+            this.dialog = "dialogForm";
           } else if (nowTime >= endTime) {
             that.days = "00";
             that.hours = "00";
@@ -217,6 +270,7 @@ export default {
             that.secs = "00";
             that.secs = "00";
             that.scale = this.$t("m.banner.h3-end");
+            this.dialog = "dialogEmail";
           }
         }
       })
@@ -228,6 +282,15 @@ export default {
 </script>
 
 <style scope>
+.return__error {
+  color: #f56c6c;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
 .el-dialog__body {
   padding: 30px 50px 10px;
 }
@@ -282,7 +345,7 @@ export default {
 }
 
 .banner-vue .header-inner > img {
-  opacity: 0;
+  visibility: hidden;
 }
 .banner-vue .header-inner .contentBox {
   width: 100%;
@@ -422,7 +485,8 @@ export default {
 .header-back {
   text-align: center;
   padding: 30px;
-  background: url("/static/image/banner.png");
+  background-size: cover;
+  background: url("/static/image/dialog.png") no-repeat;
 }
 
 .el-form-item.is-success .el-input__inner,

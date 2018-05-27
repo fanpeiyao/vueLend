@@ -1,21 +1,23 @@
-const en = {
+//cn.js
+const ch = {
     m: {
-        "lang": "en",
-        "name":"LendChain",
+        "lang": "ch",
         "footer": {
-            "join": "Join Us",
+            "join": "加入我们",
+            "whitePaper": "***",
+            "lendChain": "***"
         },
         "header": {
-            "home": "Home",
-            "whitePaper": "White paper",
-            "lendChain": "lendChain"
+            "home": "主页",
+            "whitePaper": "***",
+            "lendChain": "***"
         },
-
+        "name": "LendChain",
         "app": {
             "title": "Application Features",
             "mortgage": {
-                0:"Virtual property",
-                1:"mortgage"
+                0: "Virtual property",
+                1: "mortgage"
             },
             "history": {
                 0: "Chain credit",
@@ -34,21 +36,21 @@ const en = {
             "title": "Flow Chart",
             "borrower": "Borrower",
             "smart": "Smart Contract",
-            "one":"Mortgage investment",
+            "one": "Mortgage investment",
             "three": "Funds to account",
-            "two":"Invest",
-            "investors":'Investors'
+            "two": "Invest",
+            "investors": 'Investors'
         },
         "project": {
             "project": "Project Show"
         },
         "plan": {
             "title": "Project plan",
-            "year":'2018',
-            "timeLine":[
+            "year": '2018',
+            "timeLine": [
                 {
-                    'time':'1st Feb',
-                    'thing':'The team was build'
+                    'time': '1st Feb',
+                    'thing': 'The team was build'
                 },
                 {
                     'time': 'In May',
@@ -73,14 +75,14 @@ const en = {
         },
         "about": {
             "title": "About Lendchain",
-            "content":" is a distributed digital assets platform, providing financing, investment, and insurance for assets holders. For financing, LendChain support mortgage and credit services covering major cryptocurrencies, including BTC, ETH, EOS, GXS etc. For investment, LendChain has professional analyst team to provide various products, including venture capital, quantitative fund, lending, and mining. LendChain chose GXChain as strategic partner, which has 1.4 million real name verified users, most of them have digital assets and could be vast customer resource of our products."
+            "content": " is a distributed digital assets platform, providing financing, investment, and insurance for assets holders. For financing, LendChain support mortgage and credit services covering major cryptocurrencies, including BTC, ETH, EOS, GXS etc. For investment, LendChain has professional analyst team to provide various products, including venture capital, quantitative fund, lending, and mining. LendChain chose GXChain as strategic partner, which has 1.4 million real name verified users, most of them have digital assets and could be vast customer resource of our products."
         },
         "team": {
-            "title":'Team',
-            "team":[
+            "title": 'Team',
+            "team": [
                 {
                     "name": "Ayi",
-                    "img":"ayi",
+                    "img": "ayi",
                     "job": 'Founder CEO',
                     "introduce": "Former Director of Commercial Media for 360 New Media Former Leo Co., Ltd. (Shanghai Stock Exchange 002131) WanSheng financial CEO Get to know virtual currency since 2013 Responsible for operating multiple virtual currency domestic communities from now and then"
                 },
@@ -137,8 +139,8 @@ const en = {
         "news": {
             "title": 'News'
         },
-        "banner":{
-            "h1":"Purchase Point Cards to get free LV tokens",
+        "banner": {
+            "h1": "Purchase Point Cards to get free LV tokens",
             "h2": "Purchase 1 Point cards to get 1 LV tokens",
             "h3": "Scale Starts",
             "h3-end": "Scale End",
@@ -147,22 +149,22 @@ const en = {
             "minuter": "Minuter",
             "secs": "Secs",
             "button": "button-en",
-            "noticeTitle":'Participation Rules',
+            "noticeTitle": 'Participation Rules',
             "rules1": "1: From June 15th-17th, Click “Participate Now”, and input your email and ETH address (exchange address is not supported).Then send ETH to our crowd fund address to purchase point cards.Total points cards for sale: 100, 000, 000.",
             "rules2": "2: After purchase, points card and LV tokens will be automatically load to your LendChain account."
             ,
             "rules3": "3: Purchase 1 point cards can receive 1 LV token, which is the utility token on LendChain platform, the total supply of LV is 1, 000, 000, 000.This time we are going to send 100, 000, 000 LV to points card purchasers."
             ,
             "rules4": "4: Maximum participation amount of ETH: 30",
-            "registerModal":{
-                'title':'Get LV Tokens Now',
+            "registerModal": {
+                'title': 'Get LV Tokens Now',
                 "placeholderEmail": "Email address",
                 "placeholderEth": "Personal ETH wallet address",
                 "Emailerror": "Email is invalid",
                 "Etherror": "111"
             },
-            "cancel":'Cancel',
-            "confirm":"Confirm",
+            "cancel": 'Cancel',
+            "confirm": "Confirm",
             "confirmEmail": {
                 'title': 'Get LV Tokens Now',
                 "placeholderEmail": "Email address",
@@ -174,4 +176,5 @@ const en = {
         }
     }
 }
-export default en;
+
+export default ch;

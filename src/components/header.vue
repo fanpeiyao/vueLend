@@ -35,14 +35,14 @@ export default {
     return {
       langDropdownVisible: true,
       langs: {
-        "zh-CN": "简体中文",
-        "en-US": "English"
+        "ch": "简体中文",
+        "en": "English"
       }
     };
   },
   computed: {
     lang() {
-      return this.$i18n.locale || "en-US";
+      return this.$i18n.locale || "en";
     },
     displayedLang() {
       return this.langs[this.lang] || "English";
