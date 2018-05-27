@@ -485,8 +485,8 @@ export default {
 .header-back {
   text-align: center;
   padding: 30px;
+  background-image: url("/static/image/dialog.png");
   background-size: cover;
-  background: url("/static/image/dialog.png") no-repeat;
 }
 
 .el-form-item.is-success .el-input__inner,
