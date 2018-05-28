@@ -31,24 +31,30 @@ export default {
 }
 .about .content {
   padding-bottom: 40px;
-  width: 846px;
+  width: 1100px;
   min-height: 200px;
   margin: auto;
   position: relative;
-  padding-left: 215px;
+  padding-left: 255px;
 }
 .about .content img {
-  width: 120px;
+  width: 179px;
+  height: 187px;
   position: absolute;
-  top: 70px;
-  left: 60px;
+  top: 73px;
+  left: 0;
 }
 .content .content-text {
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: 1px;
   color: #262626;
+  padding-top: 17px;
+  padding-bottom: 19px;
 }
-
+.ablout {
+  padding: 38px 0 41px;
+}
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {
   .about .content {
@@ -68,6 +74,11 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
+  .content .content-text {
+    padding-top: 0;
+    font-size: 12px;
+  }
+
   .about .content {
     padding-bottom: 40px;
     width: 100%;
@@ -77,10 +88,8 @@ export default {
     padding: 20px;
   }
   .about .content img {
-    width: 60px;
-    top: 28px;
-    left: 20px;
-    display: block;
+
+    display: none;
   }
 }
 

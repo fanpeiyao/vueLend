@@ -169,10 +169,16 @@ const en = {
             "cancel":'Cancel',
             "confirm":"Confirm",
             "confirmEmail": {
-                'title': 'Get LV Tokens Now',
+                'title': 'Please leave your E-mail and we will contact you shortly',
                 "placeholderEmail": "Email address",
                 "error": "Email is invalid"
 
+            },
+            "confirmEth": {
+                'title': 'Please ONLY send ETH from the address that you have registered on LendChain',
+                "placeholderEmail": "Email address",
+                "success": "Successfully copied",
+                "confirm":"Copy Address",
             }
 
 

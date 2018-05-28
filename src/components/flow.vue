@@ -55,10 +55,14 @@ export default {
   left: 0;
   opacity: 0.5;
 }
+
+.flow > h1 {
+  padding-top: 82px;
+}
 .flow .flow-content {
   display: flex;
-  padding: 10px 0 40px;
-  width: 630px;
+  padding: 16px 0 78px;
+  width: 700px;
   margin: auto;
   justify-content: space-between;
 }
@@ -128,6 +132,10 @@ export default {
 @media screen and (max-width: 768px) {
   .flow .flow-content {
     width: 100%;
+  }
+
+  .flow > h1 {
+    padding-top: 20px;
   }
   .flow .flow-content .flow-list:nth-child(1) .arrow2 {
     width: 60px;

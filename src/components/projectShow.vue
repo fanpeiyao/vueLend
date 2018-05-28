@@ -94,7 +94,7 @@ export default {
 }
 
 #certify .swiper-container {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 #certify .swiper-slide {
@@ -126,11 +126,19 @@ export default {
 .projectShow > .pro-mobile .swiper-slide {
   text-align: center;
 }
-
+.projectShow > h1 {
+  padding-top: 80px;
+  padding-bottom: 58px;
+}
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {
   .projectShow > .pro-web {
     display: none;
+  }
+
+  .projectShow > h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .projectShow > .pro-mobile {
     display: block;
@@ -155,8 +163,8 @@ export default {
   }
   .projectShow > .pro-mobile {
     display: block;
-
-      width: 80%;
+    width: 80%;
+    padding-bottom: 40px;
     margin: auto;
   }
   .projectShow > .pro-mobile img {

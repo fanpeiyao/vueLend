@@ -174,7 +174,7 @@ html {
 .module-title {
   color: #262626;
   padding: 40px 0;
-  font-size: 50px;
+  font-size:42px;
 }
 .home{
     overflow: hidden;
@@ -183,6 +183,7 @@ html {
 @media screen and (max-width: 768px) {
   .module-title {
     padding: 20px 0;
+  font-size:32px;
   }
 }
 </style>

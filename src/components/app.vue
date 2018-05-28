@@ -40,9 +40,12 @@ export default {
 .Application {
   width: 100%;
   transition: all ease-out 0.3s;
-  height: 316px;
-  min-height: 316px;
+  height: 478px;
+  min-height: 478px;
   position: relative;
+}
+.Application>h1{
+    padding-top: 80px;
 }
 .Application > img {
   width: 100%;
@@ -52,7 +55,8 @@ export default {
   opacity: 0.5;
 }
 .Application ul {
-  width: 1000px;
+  width: 1100px;
+  padding-top: 14px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -62,24 +66,53 @@ export default {
   width: 25%;
   text-align: center;
   cursor: pointer;
+  font-size: 22px;
 }
 .Application ul li img {
-  width: 62px;
-  margin-bottom: 20px;
+  width:90px;
+  margin-bottom: 35px;
 }
 .Application ul li em {
   background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
-  height: 2px;
-  width: 15px;
+  height:4px;
+  width:30px;
   display: block;
-  border-radius: 1px;
-  margin: 15px auto 0;
+  border-radius:2px;
+  margin: 25px auto 0;
 }
 @media screen and (max-width: 1000px) {
   .Application ul {
     width: 80%;
     margin: auto;
   }
+
+.Application ul li img {
+  width: 62px;
+  margin-bottom: 20px;
+}
+
+.Application>h1{
+    padding-top: 40px;
+}
+.Application ul {
+  padding-top: 0;
+}
+
+.Application ul li {
+  font-size: 14px;
+}
+.Application {
+  width: 100%;
+  transition: all ease-out 0.3s;
+  height: 310px;
+  min-height: 310px;
+  position: relative;
+}
+.Application ul li em {
+    height: 2px;
+    width: 15px;
+    margin: 15px auto 0;
+}
 }
 @media screen and (max-width: 414px) {
   .Application ul {

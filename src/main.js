@@ -10,7 +10,9 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/iconfont/iconfont.css';
+import VueClipboards from 'vue-clipboards';
 
+Vue.use(VueClipboards);
 
 Vue.prototype.HOST = '/api'
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';

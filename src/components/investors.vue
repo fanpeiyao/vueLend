@@ -142,6 +142,9 @@ export default {
     width: 70%;
     margin-bottom: 20px;
   }
+  .investors .investors-content .investors-list >img{
+    width: 100%;
+  }
 
   .investors .investors-content.img_inv .investors-list {
     padding: 0;

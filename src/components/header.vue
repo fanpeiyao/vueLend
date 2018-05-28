@@ -34,8 +34,8 @@ export default {
     return {
       langDropdownVisible: true,
       langs: {
-        "ch": "简体中文",
-        "en": "English"
+        ch: "简体中文",
+        en: "English"
       }
     };
   },
@@ -78,13 +78,13 @@ export default {
   color: #fff;
 }
 .header-vue {
-  height:80px;
+  height: 80px;
   width: 100%;
   background: #fff;
 }
 .header-vue .content {
   height: 100%;
-  width: 80%;
+  width: 1100px;
   background: #fff;
   margin: 0 auto;
   display: flex;
@@ -103,24 +103,24 @@ export default {
 }
 
 .header-vue .content .check-box li.a {
-     position: relative;
+  position: relative;
 }
 
-.header-vue .content .check-box li.a >a {
-     color: #333;
+.header-vue .content .check-box li.a > a {
+  color: #333;
 }
 
 .header-vue .content .check-box li .el-dropdown {
- padding: 4px 0;
-    width: 100px;
-    text-align: center;
+  padding: 4px 0;
+  width: 100px;
+  text-align: center;
   border: 1px solid #999;
   border-radius: 20px;
   font-size: 14px;
 }
 .el-dropdown-menu__item {
-    height: 25px;
-    line-height: 25px;
+  height: 25px;
+  line-height: 25px;
 }
 .header-vue .content .check-box li i {
   transition: 0.2s;
@@ -133,32 +133,34 @@ export default {
 .header-vue .content .check-box li:hover span,
 .header-vue .content .check-box li > .el-dropdown.is-active i,
 .header-vue .content .check-box li > .el-dropdown:hover,
-.header-vue .content .check-box li.a:hover >a{
+.header-vue .content .check-box li.a:hover > a {
   color: #409eff;
 }
-
 
 .header-vue .content .check-box li.a:before {
   left: 0;
   bottom: 0;
   width: 100%;
-     bottom: -3px;
+  bottom: -3px;
   height: 2px;
   background: #409eff;
   transform: scaleX(0);
-  content: '';
+  content: "";
   position: absolute;
-  transition: transform .5s ease;
-
+  transition: transform 0.5s ease;
 }
 .header-vue .content .check-box li.a:hover:before {
   transform: scaleX(1);
 }
 
-
-
 .header-vue .el-dropdown {
   color: #333;
+}
+@media screen and (max-width: 1100px) {
+  .header-vue .content {
+    width: 100%;
+    padding: 10px;
+  }
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {
@@ -166,8 +168,12 @@ export default {
     width: 100%;
     padding: 10px;
   }
-  .logo-box .web-logo {
-      height: 20px;
+  .header-vue .content .logo-box > img {
+    height: 25px;
+  }
+
+  .header-vue .content .logo-box {
+    height: 25px;
   }
   .header-vue .content .check-box li {
     font-size: 10px;
@@ -177,6 +183,29 @@ export default {
     padding: 2px 5px;
     border: 1px solid #ccc;
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header-vue .content {
+    width: 100%;
+    padding: 10px;
+  }
+  .header-vue {
+    height: 50px;
+  }
+  .header-vue .content .logo-box > img {
+    height: 20px;
+  }
+  .header-vue .content .logo-box {
+    height: 20px;
+  }
+  .header-vue .content .check-box li {
+    font-size: 10px;
+    margin-right: 6px;
+  }
+  .header-vue .content .check-box li .el-dropdown {
+    width: 68px;
   }
 }
 </style>

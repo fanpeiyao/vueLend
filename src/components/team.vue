@@ -10,7 +10,7 @@
                 <div class="introduce">{{item.introduce}}</div>
             </el-card>
             <!-- flex布局，两边对齐，只有五个所以加一个占位 -->
-            <el-card style="opacity:0"></el-card>
+            <el-card style="opacity:0;height: 0;padding: 0; margin: 0;"></el-card>
         </div>
 
     </div>
@@ -56,7 +56,7 @@ export default {
   text-align: left;
   font-size: 12px;
   letter-spacing: 1px;
-   line-height: 20px;
+  line-height: 20px;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
@@ -68,24 +68,26 @@ export default {
   margin-bottom: 10px;
   border-radius: 50%;
 }
-.team .team-list .el-card  .el-card__body {
-    padding: 20px 15px 20px  10px;
+.team .team-list .el-card .el-card__body {
+  padding: 20px 15px 20px 10px;
 }
 .team .team-list .el-card p {
   padding: 0 20px;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
-  color: #000;
+  color: #262626;
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1px;
 }
 .team .team-list span {
-  padding: 2px 0;
-  color: #999;
+  padding: 10px 0 0;
+  color: #595959;
+  font-size: 16px;
   display: block;
 }
+
 .team .team-list .el-card:hover {
   color: #fff;
   overflow: visible;
@@ -113,6 +115,14 @@ export default {
 @media screen and (max-width: 1000px) {
   .team .team-list {
     width: 90%;
+  }
+  .team .team-list .el-card p {
+    font-size: 18px;
+  }
+  .team .team-list span {
+    padding: 2px 0;
+    color: #595959;
+    font-size: 14px;
   }
 }
 /*屏幕宽度小于768px时*/

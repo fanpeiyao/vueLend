@@ -154,13 +154,13 @@ export default {
   line-height: 30px;
   font-size: 18px;
   font-weight: 500;
-  color: #000;
+  color: #262626;
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1px;
 }
 .news .news-slide .news-list span {
-  padding: 10px 20px;
+  padding: 17px 20px;
   color: #999;
   display: block;
 }
