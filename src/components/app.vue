@@ -119,7 +119,15 @@ export default {
     width: 100%;
     justify-content: space-around;
   }
+    .Application{
 
+      height: 270px;
+    min-height: 270px;
+    }
+     .Application h1{
+
+     padding-top: 20px;
+    }
   .Application ul li {
     width: 17%;
   }

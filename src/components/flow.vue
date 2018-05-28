@@ -132,10 +132,10 @@ export default {
 @media screen and (max-width: 768px) {
   .flow .flow-content {
     width: 100%;
+    padding-bottom: 40px;
   }
-
-  .flow > h1 {
-    padding-top: 20px;
+  .flow >h1 {
+   padding-top: 20px;
   }
   .flow .flow-content .flow-list:nth-child(1) .arrow2 {
     width: 60px;

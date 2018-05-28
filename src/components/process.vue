@@ -255,6 +255,7 @@ export default {
 }
 
 @media screen and (max-width: 414px) {
+
   .plan .mobile .timeline .branch .content p {
     margin: 0 0 5px;
     width: 50%;

@@ -136,10 +136,6 @@ export default {
     display: none;
   }
 
-  .projectShow > h1 {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
   .projectShow > .pro-mobile {
     display: block;
   }
@@ -158,6 +154,10 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
+    .projectShow > h1 {
+    padding-top: 20px;
+    padding-bottom:20px;
+}
   .projectShow > .pro-web {
     display: none;
   }

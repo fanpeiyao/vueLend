@@ -78,15 +78,13 @@ export default {
     padding-top: 0;
     font-size: 12px;
   }
+    .ablout h1{
 
-  .about .content {
-    padding-bottom: 40px;
-    width: 100%;
-    min-height: 200px;
-    margin: auto;
-    position: relative;
-    padding: 20px;
-  }
+      padding: 10px 0;
+    }
+.about .content {
+    padding:0 20px;
+}
   .about .content img {
 
     display: none;

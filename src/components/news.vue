@@ -106,7 +106,7 @@ export default {
   padding-bottom: 80px;
 }
 .news .news-slide {
-  width:1100px;
+  width: 1100px;
   margin: auto;
   position: relative;
 }
@@ -170,14 +170,17 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 900px) {
-.news .news-slide {
+  .news .news-slide {
     width: 100%;
     padding: 0 10px;
-}
+  }
 }
 
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
+  .news {
+    padding-bottom: 40px;
+  }
   .news .news-slide {
     display: none;
   }
