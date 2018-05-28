@@ -533,7 +533,9 @@ export default {
   width: 380px;
   margin: auto;
 }
-
+.el-dialog__headerbtn .el-dialog__close {
+    color: #fff!important;
+}
 /*屏幕宽度小于768px时*/
 
 @media screen and (max-width: 1100px) {
@@ -604,7 +606,7 @@ export default {
 @media screen and (max-width: 414px) {
   .el-dialog__body {
     width: 80%;
-    padding: 30px 0 10px;
+    padding: 30px 0 10px!important;
     padding-left: 0!important;
     padding-right: 0!important;
   }
