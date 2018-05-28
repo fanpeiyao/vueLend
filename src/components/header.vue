@@ -70,7 +70,10 @@ export default {
   box-shadow: none!important;
   color: #fff!important;
 }
-
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+    background-color: #ecf5ff;
+    color: #509fff!important;
+}
 .el-popper[x-placement^="bottom"] .popper__arrow,
 .el-popper[x-placement^="bottom"] .popper__arrow::after {
   display: none;
@@ -209,7 +212,7 @@ export default {
     margin-right: 6px;
   }
   .header-vue .content .check-box li .el-dropdown {
-    width: 68px;
+    width:72px;
   }
 }
 </style>
