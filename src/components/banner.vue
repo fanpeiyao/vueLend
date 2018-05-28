@@ -480,7 +480,7 @@ export default {
 }
 .notics {
   height: 251px;
-  width: 970;
+  width: 970px;
   margin: auto;
   text-align: left;
   font-size: 12px;
