@@ -294,7 +294,7 @@ export default {
 .el-dialog__footer {
   width: 380px;
   margin: auto;
-  padding: 0 0 40px;
+  padding: 0 0 40px!important;
 }
 .oneButton .el-dialog__footer {
   display: flex;
@@ -510,13 +510,13 @@ export default {
 .el-form-item.is-success .el-textarea__inner:focus {
   border-color: #e5e5e5;
 }
-.el-dialog {
+.banner-vue .el-dialog {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
-.el-dialog .el-dialog__title {
+.banner-vue .el-dialog .el-dialog__title {
   line-height: 24px;
   font-size: 22px;
   line-height: 36px;
@@ -524,8 +524,8 @@ export default {
   width: 100%;
   word-wrap: break-word;
 }
-.el-dialog__headerbtn .el-dialog__close,
-.el-dialog__headerbtn .el-dialog__close:hover {
+.banner-vue .el-dialog__headerbtn .el-dialog__close,
+.banner-vue .el-dialog__headerbtn .el-dialog__close:hover {
   color: #fff;
   font-size: 20px;
 }
@@ -651,7 +651,7 @@ export default {
   }
 
   .el-dialog {
-    border-radius: 6px;
+    border-radius:10px;
   }
 }
 
