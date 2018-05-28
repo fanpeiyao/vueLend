@@ -65,10 +65,10 @@ export default {
 </script>
 <style scope>
 .el-dropdown-menu {
-  background: #509fff;
+  background: #509fff!important;
   border: 0;
   box-shadow: none;
-  color: #fff;
+  color: #fff!important;
 }
 .el-popper[x-placement^="bottom"] .popper__arrow,
 .el-popper[x-placement^="bottom"] .popper__arrow::after {
@@ -119,8 +119,8 @@ export default {
   font-size: 14px;
 }
 .el-dropdown-menu__item {
-  height: 25px;
-  line-height: 25px;
+  height: 25px!important;
+  line-height: 25px!important;
 }
 .header-vue .content .check-box li i {
   transition: 0.2s;
