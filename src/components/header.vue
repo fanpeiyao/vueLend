@@ -3,7 +3,6 @@
         <div class="content">
             <div class="logo-box">
                 <img src="static/image/logo.png" class="web-logo">
-                <img src="static/image/logo2.png" alt="" class="mobile-logo">
             </div>
             <div class="check-box">
                 <ul>
@@ -79,12 +78,9 @@ export default {
   color: #fff;
 }
 .header-vue {
-  height: 50px;
+  height:80px;
   width: 100%;
   background: #fff;
-}
-.logo-box .mobile-logo {
-  display: none;
 }
 .header-vue .content {
   height: 100%;
@@ -96,14 +92,14 @@ export default {
   justify-content: space-between;
 }
 .header-vue .content .logo-box > img {
-  height: 33px;
+  height: 50px;
   cursor: pointer;
 }
 .header-vue .content .check-box li {
   display: inline;
   cursor: pointer;
   margin-right: 30px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .header-vue .content .check-box li.a {
@@ -115,10 +111,16 @@ export default {
 }
 
 .header-vue .content .check-box li .el-dropdown {
-  padding: 2px 10px;
+ padding: 4px 0;
+    width: 100px;
+    text-align: center;
   border: 1px solid #999;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 14px;
+}
+.el-dropdown-menu__item {
+    height: 25px;
+    line-height: 25px;
 }
 .header-vue .content .check-box li i {
   transition: 0.2s;
@@ -164,11 +166,8 @@ export default {
     width: 100%;
     padding: 10px;
   }
-  .logo-box .mobile-logo {
-    display: block;
-  }
   .logo-box .web-logo {
-    display: none;
+      height: 20px;
   }
   .header-vue .content .check-box li {
     font-size: 10px;

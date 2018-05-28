@@ -155,9 +155,12 @@ export default {
   }
   .projectShow > .pro-mobile {
     display: block;
+
+      width: 80%;
+    margin: auto;
   }
   .projectShow > .pro-mobile img {
-    width: 100vw;
+    width: 100%;
   }
 }
 </style>

@@ -135,7 +135,12 @@ const en = {
 
         },
         "news": {
-            "title": 'News'
+            "title": 'News',
+            "card":[
+                { "title": "LendChain Progress report（5.13-5.19）", "time":"2018.05.19 11:06","path":"","img":""},
+                { "title": "LendChain Progress report（5.6-5.12）", "time": "2018.05.12 11:06" },
+                { "title": "LendChain Progress report（4.29-5.5）", "time": "2018.05.05 11:06" }
+            ]
         },
         "banner":{
             "h1":"Purchase Point Cards to get free LV tokens",

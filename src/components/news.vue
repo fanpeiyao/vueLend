@@ -5,29 +5,29 @@
         <div class='news-slide'>
             <swiper :options="swiperOption">
                 <swiper-slide>
-
                     <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new1.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <a href="https://mp.weixin.qq.com/s/cL-tGzEU1OXGYxPFXO8OtQ" target="_black"><img src="static/image/new1.png" class="image">
+                        <p>{{$t('m.news.card[0].title')}}</p>
+                        <span>{{$t('m.news.card[0].time')}}</span></a>
                     </el-card>
-
                     <el-card shadow="hover"  class='news-list'>
+                        <a href=" https://mp.weixin.qq.com/s/SxcmB1UtKaDMi8wPVrkmcA" target="_black">
                         <img src="static/image/new3.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <p>{{$t('m.news.card[1].title')}}</p>
+                        <span>{{$t('m.news.card[1].time')}}</span></a>
                     </el-card>
                     <el-card shadow="hover"  class='news-list'>
+                        <a href="https://mp.weixin.qq.com/s/OcINL6eWEqCaw-I0Dk6Xpg" target="_black">
                         <img src="static/image/new2.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <p>{{$t('m.news.card[2].title')}}</p>
+                        <span>{{$t('m.news.card[2].time')}}</span>
+                        </a>
                     </el-card>
-
                 </swiper-slide>
-                <swiper-slide>
+                <!-- <swiper-slide>
                     Slide 2
                 </swiper-slide>
-                <swiper-slide>Slide 3</swiper-slide>
+                <swiper-slide>Slide 3</swiper-slide> -->
 
             </swiper>
 
@@ -39,68 +39,26 @@
             <swiper :options="swiperOption2">
                 <swiper-slide>
                     <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new1.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <a href="https://mp.weixin.qq.com/s/cL-tGzEU1OXGYxPFXO8OtQ" target="_black"><img src="static/image/new1.png" class="image">
+                        <p>{{$t('m.news.card[0].title')}}</p>
+                        <span>{{$t('m.news.card[0].time')}}</span></a>
                     </el-card>
                 </swiper-slide>
                 <swiper-slide>
                     <el-card shadow="hover"  class='news-list'>
+                        <a href=" https://mp.weixin.qq.com/s/SxcmB1UtKaDMi8wPVrkmcA" target="_black">
                         <img src="static/image/new3.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <p>{{$t('m.news.card[1].title')}}</p>
+                        <span>{{$t('m.news.card[1].time')}}</span></a>
                     </el-card>
-
                 </swiper-slide>
                 <swiper-slide>
                     <el-card shadow="hover"  class='news-list'>
+                        <a href="https://mp.weixin.qq.com/s/OcINL6eWEqCaw-I0Dk6Xpg" target="_black">
                         <img src="static/image/new2.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new1.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new3.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new2.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new1.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new3.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
-                    </el-card>
-
-                </swiper-slide>
-                <swiper-slide>
-                    <el-card shadow="hover"  class='news-list'>
-                        <img src="static/image/new2.png" class="image">
-                        <p>ssssssssdddddddddddddddddddddddddddddddddddddddds</p>
-                        <span>102093-2-22</span>
+                        <p>{{$t('m.news.card[2].title')}}</p>
+                        <span>{{$t('m.news.card[2].time')}}</span>
+                        </a>
                     </el-card>
                 </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>

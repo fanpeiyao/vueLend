@@ -174,7 +174,7 @@ html {
 .module-title {
   color: #262626;
   padding: 40px 0;
-  font-size: 30px;
+  font-size: 50px;
 }
 .home{
     overflow: hidden;

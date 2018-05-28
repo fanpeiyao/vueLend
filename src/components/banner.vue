@@ -355,7 +355,7 @@ export default {
 .banner-vue .header-inner .contentBox h1 {
   text-align: center;
   font-size: 34px;
-  margin-top: 30px;
+  margin-top: 36px;
   position: relative;
 
   -webkit-animation: fade-in-down 0.6s;
@@ -400,13 +400,13 @@ export default {
 .banner-vue .header-inner .contentBox h2 {
   font-weight: normal;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   color: #fff;
 }
 .banner-vue .header-inner .contentBox h3 {
   font-weight: normal;
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
   color: #fff;
 }
 .banner-vue .header-inner .contentBox .timeBox {
@@ -464,8 +464,8 @@ export default {
   cursor: pointer;
 }
 .notics {
-  height: 200px;
-  width: 60%;
+  height: 211px;
+  width: 50%;
   margin: auto;
   text-align: left;
   padding: 20px 0 0 0;
@@ -475,6 +475,7 @@ export default {
 .notics .title {
   margin-bottom: 10px;
   color: #509fff;
+  font-size: 16px;
 }
 .notics li {
   font-size: 11px;

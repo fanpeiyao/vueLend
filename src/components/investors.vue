@@ -52,7 +52,7 @@ export default {
   justify-content: space-between;
 }
 .investors .investors-content .investors-list {
-  width: 30%;
+  width: 23%;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@ export default {
     justify-content: center;
   }
   .investors .investors-content .investors-list {
-    width: 80%;
+    width: 70%;
     margin-bottom: 20px;
   }
 

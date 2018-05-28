@@ -56,7 +56,7 @@ export default {
   text-align: left;
   font-size: 12px;
   letter-spacing: 1px;
-  line-height: 25px;
+   line-height: 20px;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
@@ -67,6 +67,9 @@ export default {
   width: 100px;
   margin-bottom: 10px;
   border-radius: 50%;
+}
+.team .team-list .el-card  .el-card__body {
+    padding: 20px 15px 20px  10px;
 }
 .team .team-list .el-card p {
   padding: 0 20px;
