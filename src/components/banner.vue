@@ -619,9 +619,9 @@ export default {
   .banner-vue .header-inner .contentBox .notics {
     display: none;
   }
-.dialog-footer button {
+  .dialog-footer button {
     width: 120px;
-}
+  }
   .banner-vue .header-inner .contentBox .timeBox {
     padding: 5% 10px 0;
   }
@@ -652,6 +652,10 @@ export default {
 @media screen and (max-width: 400px) {
   .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 0;
+  }
+
+  .dialog-footer button {
+    width: 100px;
   }
 }
 </style>
