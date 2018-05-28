@@ -166,7 +166,9 @@ export default {
 @media screen and (max-width: 768px) {
   .header-vue .content {
     width: 100%;
-    padding: 10px;
+    padding:0 10px;
+      display: flex;
+    align-items: center;
   }
   .header-vue .content .logo-box > img {
     height: 25px;

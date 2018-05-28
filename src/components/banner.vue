@@ -605,10 +605,14 @@ export default {
   .el-dialog__body {
     width: 80%;
     padding: 30px 0 10px;
+    padding-left: 0!important;
+    padding-right: 0!important;
   }
   .el-dialog__footer {
     width: 80%;
     margin: auto;
+    padding-left: 0!important;
+    padding-right: 0!important;
   }
   .el-form-item__content {
     width: 100%;
