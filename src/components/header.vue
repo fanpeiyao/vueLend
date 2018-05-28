@@ -66,10 +66,11 @@ export default {
 <style scope>
 .el-dropdown-menu {
   background: #509fff!important;
-  border: 0;
-  box-shadow: none;
+  border: 0!important;
+  box-shadow: none!important;
   color: #fff!important;
 }
+
 .el-popper[x-placement^="bottom"] .popper__arrow,
 .el-popper[x-placement^="bottom"] .popper__arrow::after {
   display: none;
@@ -119,6 +120,7 @@ export default {
   font-size: 14px;
 }
 .el-dropdown-menu__item {
+    color: #fff!important;
   height: 25px!important;
   line-height: 25px!important;
 }
