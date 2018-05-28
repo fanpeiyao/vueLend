@@ -499,7 +499,7 @@ export default {
 }
 .header-back {
   text-align: center;
-  padding: 30px;
+  padding: 30px!important;
   background-image: url("/static/image/dialog.png");
   background-size: cover;
 }
@@ -610,6 +610,9 @@ export default {
     padding-left: 0!important;
     padding-right: 0!important;
   }
+  .el-dialog__header {
+    padding: 20px !important;
+}
   .el-dialog__footer {
     width: 80%;
     margin: auto;
