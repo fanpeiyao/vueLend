@@ -46,7 +46,7 @@ export default {
 }
 .investors .investors-content {
   display: flex;
-  padding: 10px 0 40px;
+  padding: 10px 0 80px;
   width:1100px;
   margin: auto;
   justify-content: space-between;
@@ -139,6 +139,7 @@ export default {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 40px;
   }
   .investors .investors-content .investors-list {
     width: 70%;

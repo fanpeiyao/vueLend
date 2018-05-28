@@ -466,7 +466,7 @@ export default {
 }
 
 .el-button--text {
-  padding: 61px 0 58px;
+  padding: 61px 0 58px!important;
 }
 .banner-vue .header-inner .contentBox .buttonbox {
   margin: auto;
@@ -616,6 +616,10 @@ export default {
     padding-left: 0!important;
     padding-right: 0!important;
   }
+
+.el-button--text {
+  padding: 12px 20px!important;
+}
   .el-form-item__content {
     width: 100%;
   }
