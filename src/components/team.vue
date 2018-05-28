@@ -32,7 +32,7 @@ export default {
   padding-bottom: 30px;
 }
 .team .team-list {
-  width: 900px;
+  width: 1100px;
   margin: auto;
   display: flex;
   justify-content: space-between;

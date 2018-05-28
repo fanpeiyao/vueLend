@@ -68,7 +68,7 @@ export default {
   background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
 }
 .bottom-vue ul li i {
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
 }
 .bottom-vue ul li:hover {

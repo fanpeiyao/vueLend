@@ -106,7 +106,7 @@ export default {
   padding-bottom: 80px;
 }
 .news .news-slide {
-  width: 900px;
+  width:1100px;
   margin: auto;
   position: relative;
 }
