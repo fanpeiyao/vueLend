@@ -133,5 +133,8 @@ export default {
   .bottom-vue ul li:hover img.web_code {
     display: none;
   }
+  .bottom-vue ul li img.code {
+        bottom: 50px;
+    }
 }
 </style>

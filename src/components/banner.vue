@@ -182,11 +182,13 @@ export default {
       }, 1000);
     },
     getToken(n) {
-        document.getElementsByClassName("el-dialog__header")[0].classList.add("header-back");
-        if (document.getElementsByClassName("el-dialog__header").length > 0) {
-            for (let a of document.getElementsByClassName("el-dialog__header"))
-            a.classList.add("header-back");
-        }
+      document
+        .getElementsByClassName("el-dialog__header")[0]
+        .classList.add("header-back");
+      if (document.getElementsByClassName("el-dialog__header").length > 0) {
+        for (let a of document.getElementsByClassName("el-dialog__header"))
+          a.classList.add("header-back");
+      }
       this[n] = true;
     },
 
@@ -239,7 +241,9 @@ export default {
   created() {
     window.onload = function(params) {
       //dialog背景图片
-      document.getElementsByClassName("el-dialog__header")[0].classList.add("header-back");
+      document
+        .getElementsByClassName("el-dialog__header")[0]
+        .classList.add("header-back");
       if (document.getElementsByClassName("el-dialog__header").length > 0) {
         for (let a of document.getElementsByClassName("el-dialog__header"))
           a.classList.add("header-back");
@@ -293,12 +297,12 @@ export default {
 .el-dialog__body {
   width: 380px;
   margin: auto;
-  padding: 50px 0 10px!important;
+  padding: 50px 0 10px !important;
 }
 .el-dialog__footer {
   width: 380px;
   margin: auto;
-  padding: 0 0 40px!important;
+  padding: 0 0 40px !important;
 }
 .oneButton .el-dialog__footer {
   display: flex;
@@ -327,11 +331,6 @@ export default {
 }
 .dialog-footer button.el-button--primary {
   background: linear-gradient(45deg, #4885ff 0%, #509fff 100%);
-}
-.el-dialog__headerbtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 .el-input input {
   border-radius: 0;
@@ -470,7 +469,7 @@ export default {
 }
 
 .el-button--text {
-  padding: 61px 0 58px!important;
+  padding: 61px 0 58px !important;
 }
 .banner-vue .header-inner .contentBox .buttonbox {
   margin: auto;
@@ -503,7 +502,7 @@ export default {
 }
 .header-back {
   text-align: center;
-  padding: 30px!important;
+  padding: 30px !important;
   background-image: url("/static/image/dialog.png");
   background-size: cover;
 }
@@ -528,11 +527,9 @@ export default {
   word-wrap: break-word;
 }
 
-
-
 .banner-vue .oneEmail .el-dialog .el-dialog__title {
- width: 367px;
- display: inline-block;
+  width: 367px;
+  display: inline-block;
 }
 .banner-vue .registerDialog .el-dialog .el-dialog__title {
   font-size: 30px;
@@ -551,7 +548,7 @@ export default {
   margin: auto;
 }
 .el-dialog__headerbtn .el-dialog__close {
-    color: #fff!important;
+  color: #fff !important;
 }
 /*屏幕宽度小于768px时*/
 
@@ -573,7 +570,7 @@ export default {
   }
   .banner-vue .header-inner .contentBox h1 {
     font-size: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .banner-vue .header-inner .contentBox h2,
   .banner-vue .header-inner .contentBox h3 {
@@ -618,59 +615,59 @@ export default {
 }
 
 @media screen and (max-width: 414px) {
+  .el-dialog__headerbtn {
+    position: absolute;
+    top: 10px !important;
+    right: 10px !important;
+  }
 
-.banner-vue .oneEmail .el-dialog .el-dialog__title {
- width: 100%;
- display: inline-block;
-}
-.banner-vue {
-      height: 860px;
-}
+  .banner-vue .oneEmail .el-dialog .el-dialog__title {
+    width: 100%;
+    display: inline-block;
+  }
+  .banner-vue {
+    height: 800px;
+  }
 
   .el-dialog__body {
     width: 80%;
-    padding: 30px 0 10px!important;
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding: 30px 0 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .el-dialog__header {
     padding: 20px !important;
-}
+  }
   .el-dialog__footer {
     width: 80%;
     margin: auto;
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-.el-button--text {
-  padding: 20px!important;
-}
+  .el-button--text {
+    padding: 20px 20px 30px !important;
+  }
   .el-form-item__content {
     width: 100%;
   }
 
-.banner-vue .header-inner .contentBox h2{
-    font-size:20px;
-    margin-bottom:15px;
-    margin-top: 20px;
-}
+  .banner-vue .header-inner .contentBox h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
 
   .banner-vue .header-inner .contentBox h3 {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 18px;
   }
-  /* .banner-vue .header-inner .contentBox h1,
-  .banner-vue .header-inner .contentBox h2,
-  .banner-vue .header-inner .contentBox h3,
-  .banner-vue .header-inner .contentBox .notics {
-    display: none;
-  } */
   .dialog-footer button {
     width: 120px;
   }
   .banner-vue .header-inner .contentBox .timeBox {
-    padding: 5% 10px 0;
+    padding: 5% 10px;
   }
   .banner-vue .header-inner .contentBox .buttonbox {
     margin-top: 12px;
@@ -692,7 +689,7 @@ export default {
   }
 
   .el-dialog {
-    border-radius:10px;
+    border-radius: 10px;
   }
 }
 

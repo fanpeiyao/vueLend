@@ -169,12 +169,13 @@ export default {
     display: block;
   }
   .team .team-list.mobile .el-card {
-    width: 80%;
+    width:100%;
     margin: auto;
   }
 
   .team .team-list > div {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     height: 215px;
     margin-bottom: 25px;
   }
