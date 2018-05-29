@@ -5,7 +5,7 @@
 
                 <h1>{{$t('m.banner.h1')}}</h1>
                 <h2>{{$t('m.banner.h2')}}</h2>
-                <h3>{{scale}}</h3>
+                <h3>{{sale}}</h3>
                 <!-- 时间 -->
                 <div class='timeBox'>
                     <div class="grid-content">
@@ -84,7 +84,7 @@
         :visible.sync="dialogEth"
         width="550px"
         :before-close="handleCloseEth">
-            <div class='text-center' style="margin-bottom: 18px;">{{eth}}</div>
+            <div class='text-center' style="    font-size: 18px;">{{eth}}</div>
             <span slot="footer" class="dialog-footer">
                 <el-button type="primary"  v-clipboard="eth" @success="copy" >{{this.$t("m.banner.confirmEth.confirm")}}</el-button>
             </span>
@@ -138,7 +138,7 @@ export default {
       emailForm: {
         email: ""
       },
-      scale: this.$t("m.banner.h3"),
+      sale: this.$t("m.banner.h3"),
       days: null,
       hours: null,
       min: null,
@@ -182,6 +182,11 @@ export default {
       }, 1000);
     },
     getToken(n) {
+        document.getElementsByClassName("el-dialog__header")[0].classList.add("header-back");
+        if (document.getElementsByClassName("el-dialog__header").length > 0) {
+            for (let a of document.getElementsByClassName("el-dialog__header"))
+            a.classList.add("header-back");
+        }
       this[n] = true;
     },
 
@@ -234,9 +239,7 @@ export default {
   created() {
     window.onload = function(params) {
       //dialog背景图片
-      document
-        .getElementsByClassName("el-dialog__header")[0]
-        .classList.add("header-back");
+      document.getElementsByClassName("el-dialog__header")[0].classList.add("header-back");
       if (document.getElementsByClassName("el-dialog__header").length > 0) {
         for (let a of document.getElementsByClassName("el-dialog__header"))
           a.classList.add("header-back");
@@ -253,10 +256,11 @@ export default {
           if (nowTime < startTime) {
             this.getCountDown(nowTime, startTime);
             //不是活动时间展示一个email框
-            this.dialog = "dialogForm";
+            this.dialog = "dialogEmail";
           } else if (startTime <= nowTime <= endTime) {
             this.getCountDown(nowTime, endTime);
-            //活动时间展示注册框
+            //活动时间展示注册框,活动开始后用end
+            that.sale = this.$t("m.banner.h3-end");
             this.dialog = "dialogForm";
           } else if (nowTime >= endTime) {
             that.days = "00";
@@ -264,7 +268,7 @@ export default {
             that.min = "00";
             that.secs = "00";
             that.secs = "00";
-            that.scale = this.$t("m.banner.h3-end");
+            that.sale = this.$t("m.banner.h3-end");
             this.dialog = "dialogEmail";
           }
         }
@@ -289,7 +293,7 @@ export default {
 .el-dialog__body {
   width: 380px;
   margin: auto;
-  padding: 50px 0 10px;
+  padding: 50px 0 10px!important;
 }
 .el-dialog__footer {
   width: 380px;
@@ -517,8 +521,21 @@ export default {
 }
 
 .banner-vue .el-dialog .el-dialog__title {
-  line-height: 24px;
   font-size: 22px;
+  line-height: 36px;
+  color: #fff;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+
+.banner-vue .oneEmail .el-dialog .el-dialog__title {
+ width: 367px;
+ display: inline-block;
+}
+.banner-vue .registerDialog .el-dialog .el-dialog__title {
+  font-size: 30px;
   line-height: 36px;
   color: #fff;
   width: 100%;
@@ -549,9 +566,6 @@ export default {
     height: 60px;
     width: 60px;
     line-height: 60px;
-  }
-  .banner-vue .header-inner .contentBox .notics {
-    display: none;
   }
 
   .banner-vue {
@@ -604,6 +618,15 @@ export default {
 }
 
 @media screen and (max-width: 414px) {
+
+.banner-vue .oneEmail .el-dialog .el-dialog__title {
+ width: 100%;
+ display: inline-block;
+}
+.banner-vue {
+      height: 860px;
+}
+
   .el-dialog__body {
     width: 80%;
     padding: 30px 0 10px!important;
@@ -621,17 +644,28 @@ export default {
   }
 
 .el-button--text {
-  padding: 12px 20px!important;
+  padding: 20px!important;
 }
   .el-form-item__content {
     width: 100%;
   }
-  .banner-vue .header-inner .contentBox h1,
+
+.banner-vue .header-inner .contentBox h2{
+    font-size:20px;
+    margin-bottom:15px;
+    margin-top: 20px;
+}
+
+  .banner-vue .header-inner .contentBox h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* .banner-vue .header-inner .contentBox h1,
   .banner-vue .header-inner .contentBox h2,
   .banner-vue .header-inner .contentBox h3,
   .banner-vue .header-inner .contentBox .notics {
     display: none;
-  }
+  } */
   .dialog-footer button {
     width: 120px;
   }

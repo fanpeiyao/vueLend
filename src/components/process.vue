@@ -7,13 +7,21 @@
             <ol class="timeline">
                 <span class="time">{{$t('m.plan.year')}}</span>
                 <li v-for="(item, key) in timeline" :key="key">
-                    <p v-if="key != 2 && key!=4">{{item.thing}}</p>
-                    <div v-else>
-                        <div>{{item.thing}}</div>
+                    <div v-if="key%2 == 0">
+                        <p v-if="key != 2 && key!=4">{{item.thing}}</p>
+                        <div class='noteBox' v-else>
+                            <div class='note'>{{item.thing}}</div>
+                        </div>
+                        <span>
+                            {{item.time}}
+                        </span>
                     </div>
-                    <span>
-                        {{item.time}}
-                    </span>
+                    <div v-else>
+                        <span>
+                            {{item.time}}
+                        </span>
+                        <p>{{item.thing}}</p>
+                    </div>
                 </li>
             </ol>
         </div>
@@ -59,7 +67,7 @@ export default {
 }
 
 .plan .web {
-  padding: 100px 0 140px;
+  padding: 100px 0 180px;
 }
 .plan .web .timeline .time {
   position: absolute;
@@ -85,11 +93,11 @@ export default {
   width: 180px;
   top: -95px;
 }
-.plan .web .timeline li > div {
+.plan .web .timeline li .noteBox {
   position: relative;
   height: 35px;
 }
-.plan .web .timeline li > div > div {
+.plan .web .timeline li > div .note {
   position: absolute;
   width: 300px;
 }

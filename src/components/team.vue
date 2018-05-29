@@ -2,15 +2,30 @@
 <template>
     <div class="team">
         <h1 class="text-center font-weight module-title">{{$t('m.team.title')}}</h1>
-        <div class='team-list'>
+        <div class='team-list web'>
             <el-card shadow="hover"  v-for="(item, key) in team" :key="key">
                 <img :src='"static/image/"+item.img+".png"' class="image">
                 <p>{{item.name}} </p>
                 <span>{{item.job}}</span>
-                <div class="introduce">{{item.introduce}}</div>
+                <div class="introduce">
+                    <div v-for="(p, key) in item.introduce" :key="key">{{p}}</div></div>
             </el-card>
             <!-- flex布局，两边对齐，只有五个所以加一个占位 -->
             <el-card style="opacity:0;height: 0;padding: 0; margin: 0;"></el-card>
+        </div>
+
+        <div class='team-list mobile'>
+            <div  v-for="(item, key) in team" :key="key"  @click="showCard($event)" >
+                <el-card shadow="hover" >
+                    <div>
+                        <img :src='"static/image/"+item.img+".png"' class="image">
+                        <p>{{item.name}} </p>
+                        <span>{{item.job}}</span>
+                        <div class="introduce">
+                    <div v-for="(p, key) in item.introduce" :key="key">{{p}}</div></div>
+                    </div>
+                </el-card>
+            </div>
         </div>
 
     </div>
@@ -22,6 +37,15 @@ export default {
     return {
       team: this.$t("m.team.team")
     };
+  },
+  methods: {
+    showCard($event) {
+      if ($event.currentTarget.className == "mobileCard") {
+        $event.currentTarget.className = "mobileCardno";
+      } else {
+        $event.currentTarget.className = "mobileCard";
+      }
+    }
   }
 };
 </script>
@@ -29,7 +53,7 @@ export default {
 <style scope>
 .team {
   background: #fff;
-  padding-bottom: 30px;
+  padding-bottom:60px;
 }
 .team .team-list {
   width: 1100px;
@@ -37,6 +61,9 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.team .team-list.mobile {
+  display: none;
 }
 .team .team-list .el-card {
   width: 30%;
@@ -96,6 +123,7 @@ export default {
 .team .team-list .el-card:hover .el-card__body {
   position: absolute;
   border-radius: 5px;
+  width: 100%;
   background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
   z-index: 9;
 }
@@ -131,8 +159,69 @@ export default {
     width: 100%;
     justify-content: center;
   }
-  .team .team-list .el-card {
+  .team {
+    padding-bottom: 20px;
+  }
+  .team .team-list.web {
+    display: none;
+  }
+  .team .team-list.mobile {
+    display: block;
+  }
+  .team .team-list.mobile .el-card {
     width: 80%;
+    margin: auto;
+  }
+
+  .team .team-list > div {
+    width: 100%;
+    height: 215px;
+    margin-bottom: 25px;
+  }
+  .team .team-list .mobileCard .el-card {
+    color: #fff;
+    overflow: visible;
+    background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
+  }
+  .team .team-list .mobileCard .el-card .el-card__body {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
+    z-index: 9;
+  }
+  .team .team-list .mobileCard .el-card .introduce {
+    height: auto;
+    opacity: 1;
+    display: block;
+  }
+  .team .team-list .mobileCard .el-card p,
+  .team .team-list .mobileCard .el-card span {
+    color: #fff;
+  }
+
+  .team .team-list .mobileCardno .el-card {
+    background: #fff;
+    height: 215px;
+    margin: auto;
+  }
+  .team .team-list .mobileCardno .el-card .el-card__body {
+    padding: 20px 15px 20px 10px;
+    background: #fff;
+    width: 100%;
+  }
+  .team .team-list .mobileCardno .el-card .introduce {
+    height: 1px;
+    opacity: 0;
+
+    display: none;
+    transition: all 0.1s;
+  }
+  .team .team-list .mobileCardno .el-card p {
+    color: #262626;
+  }
+  .team .team-list .mobileCardno .el-card span {
+    color: #595959;
   }
 }
 </style>

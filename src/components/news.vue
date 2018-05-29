@@ -103,7 +103,7 @@ export default {
 <style>
 .news {
   background: #fff;
-  padding-bottom: 80px;
+  padding-bottom: 110px;
 }
 .news .news-slide {
   width: 1100px;
@@ -112,7 +112,7 @@ export default {
 }
 
 .news .news-slide .swiper-pagination-bullets {
-  bottom: -30px;
+  bottom: -45px;
   margin: auto;
   left: 0;
   right: 0;
@@ -134,7 +134,6 @@ export default {
 }
 .news .news-slide .swiper-slide {
   display: flex;
-  padding: 10px 0;
   justify-content: space-between;
 }
 .news .news-slide .news-list {
@@ -190,7 +189,7 @@ export default {
   }
   .news .news-mobile .el-card {
     margin: auto;
-    width: 90%;
+    width: 80%;
   }
 
   .news .news-mobile .el-card .el-card__body {

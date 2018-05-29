@@ -56,12 +56,9 @@ export default {
   opacity: 0.5;
 }
 
-.flow > h1 {
-  padding-top: 82px;
-}
 .flow .flow-content {
   display: flex;
-  padding: 16px 0 78px;
+  padding: 16px 0 80px;
   width: 700px;
   margin: auto;
   justify-content: space-between;
@@ -132,7 +129,7 @@ export default {
 @media screen and (max-width: 768px) {
   .flow .flow-content {
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   .flow >h1 {
    padding-top: 20px;

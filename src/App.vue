@@ -173,7 +173,7 @@ html {
 }
 .module-title {
   color: #262626;
-  padding: 40px 0;
+  padding:80px 0 60px;
   font-size:42px;
 }
 .home{
@@ -182,7 +182,7 @@ html {
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 768px) {
   .module-title {
-    padding: 20px 0;
+    padding: 40px 0;
   font-size:32px;
   }
 }

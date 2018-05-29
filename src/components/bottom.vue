@@ -2,9 +2,11 @@
     <div class="bottom-vue">
         <h1 class=' text-center text-white'>Join Us</h1>
         <ul>
-            <li  v-for="(item, key) in bottomList" :key="key">
+            <li  v-for="(item, key) in bottomList" :key="key" @click="showCode">
+                <img :src='"static/image/"+item.code+".png"' alt="" class="code web_code">
+                <img :src='"static/image/"+item.code+".png"' alt="" class="code mobile_code" v-if="code && item.img == 'wechat'">
                 <a :href="item.path" target="blank">
-                    <i class="iconfont" :class="item.icon"></i>
+                    <img :src='"static/image/"+item.img+".png"' alt="" class="icon">
                 </a>
             </li>
         </ul>
@@ -19,19 +21,24 @@ export default {
   name: "bottom",
   data() {
     return {
+      code: false,
       bottomList: [
-        { path: "https://trade.lendx.vip", icon: "icon-msnui-computer" },
-        { path: "https://weibo.com", icon: "icon-weibo1" },
-        { path: "", icon: "icon-wechat" },
-        { path: "https://www.facebook.com/", icon: "icon-facebook" },
-        { path: "https://twitter.com/", icon: "icon-twitter" },
-        { path: "", icon: "icon-emizhifeiji" },
-        { path: "https://www.linkedin.com/", icon: "icon-linkedin" }
+        { path: "https://trade.lendx.vip", img: "l" },
+        { path: "https://weibo.com/lendchain", img: "weibo" },
+        { img: "wechat", code: "l_ewm" },
+        { path: "https://www.facebook.com/lendchain", img: "facebook" },
+        { path: "https://twitter.com/lendchain", img: "twitter" },
+        { path: "https://t.me/Lendchain", img: "telegram" },
+        { path: "https://www.instagram.com/lendchain/", img: "in" }
       ]
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    showCode() {
+      this.code = !this.code;
+    }
+  },
   created() {}
 };
 </script>
@@ -42,7 +49,7 @@ export default {
   transition: all ease-out 0.3s;
 }
 .bottom-vue h1 {
-  font-size: 26px;
+  font-size: 30px;
   padding: 53px 0 63px;
   font-weight: normal;
 }
@@ -59,21 +66,36 @@ export default {
 .bottom-vue ul li {
   color: #12161f;
   margin-right: 36px;
+  cursor: pointer;
   height: 50px;
   line-height: 50px;
   text-align: center;
   width: 50px;
+  position: relative;
   border-radius: 50%;
   transition: 0.6s ease;
-  background: linear-gradient(45deg, #4e9aff 0%, #4989ff 100%);
 }
-.bottom-vue ul li i {
-  font-size: 22px;
-  color: #333;
+.bottom-vue ul li img.icon {
+  width: 50px;
+  height: 50px;
 }
-.bottom-vue ul li:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
+
+.bottom-vue ul li img.code {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 70px;
+  left: -35px;
+  transition: all 0.2s;
+}
+
+.bottom-vue ul li img.web_code {
+  opacity: 0;
+  display: none;
+}
+.bottom-vue ul li:hover img.web_code {
+  display: block;
+  opacity: 1;
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {
@@ -100,8 +122,16 @@ export default {
     width: 30px;
     line-height: 30px;
   }
-  .bottom-vue ul li i {
-    font-size: 16px;
+  .bottom-vue ul li img.icon {
+    height: 35px;
+    width: 35px;
+    line-height: 30px;
+  }
+  .bottom-vue ul li img.web_code {
+    display: none;
+  }
+  .bottom-vue ul li:hover img.web_code {
+    display: none;
   }
 }
 </style>

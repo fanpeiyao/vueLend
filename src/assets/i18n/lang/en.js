@@ -63,7 +63,7 @@ const en = {
                     'thing': 'APP launched,Bond transfer,Fast loan'
                 },
                 {
-                    'time': 'In Q3',
+                    'time': 'In Q4',
                     'thing': 'Asset securltization products,digtial asset investment community'
                 }
             ]
@@ -79,33 +79,63 @@ const en = {
             "title":'Team',
             "team":[
                 {
-                    "name": "Ayi",
+                    "name": "Oscar Sum",
                     "img":"ayi",
                     "job": 'Founder CEO',
-                    "introduce": "Former Director of Commercial Media for 360 New Media Former Leo Co., Ltd. (Shanghai Stock Exchange 002131) WanSheng financial CEO Get to know virtual currency since 2013 Responsible for operating multiple virtual currency domestic communities from now and then"
+                    "introduce": [
+                        "Former Director of Commercial Media for 360 New Media",
+                        "Former Leo Co., Ltd. (Shanghai Stock Exchange 002131) WanSheng financial CEO",
+                        "Get to know virtual currency since 2013",
+                        "Responsible for operating multiple virtual currency domestic communities from now and then"
+                    ]
                 },
                 {
                     "name": "Samuel",
                     "img": "samuel",
                     "job": 'Co-Founder Product Director',
-                    "introduce": "ormer co-founder of Zhuge Wallet QingLan financial Product Director;Netease Financial Product Manager Specialized in Internet finance for many years In - depth understanding of big data risk control"
+                    "introduce": [
+                        "ormer co-founder of Zhuge Wallet",
+                        " QingLan financial Product Director;",
+                        "Netease Financial Product Manager",
+                        "Specialized in Internet finance for many years",
+                        "In - depth understanding of big data risk control"
+                    ]
                 },
                 {
                     "name": "Zhu Xuyin",
                     "job": 'Architect',
                     "img": "zhu",
-                    "introduce": "Peacebird E-commerce project leader；Previously worked in Hangzhou SEPBO Technology；Leading the design of tens of millions of PV website system architecture；Thousands of QPS spike high concurrent scene experience；Deep Thinking on Internet Financial ；Architecture and Blockchain Technology"
+                    "introduce":[
+                        "Peacebird E-commerce project leader",
+                        "Previously worked in Hangzhou SEPBO Technology",
+                        "Leading the design of tens of millions of PV website system architecture",
+                        "Thousands of QPS spike high concurrent scene experience",
+                        "Deep Thinking on Internet Financial",
+                        "Architecture and Blockchain Technology"
+                    ]
                 }, {
                     "name": "Mingyi",
                     "img": "ming",
                     "job": 'Software Engineer',
-                    "introduce": "Previously worked at Hang Seng Electronics Head of Commodity Module, Shanghai Petroleum Exchange Shanghai postage card storage module person in charge Served in the era of silver pass software Gold lease project leader Commodity project manager"
+                    "introduce": [
+                        "Previously worked at Hang Seng Electronics ",
+                        "Head of Commodity Module, Shanghai Petroleum Exchange",
+                        "Shanghai postage card storage module person in charge",
+                        "Served in the era of silver pass software",
+                        "Gold lease project leader Commodity project manager"
+                    ]
                 },
                 {
                     "name": "Mohammad",
                     "img": "mohammad",
                     "job": 'Global Market Operations Expert',
-                    "introduce": "With his skills to develop, implement, track, Optimize the digital marketing campaigns and To handle the promotions of the company and Its products or services around the world across All digital channels."
+                    "introduce": [
+                        "With his skills to develop, implement, track,",
+                        "Optimize the digital marketing campaigns and",
+                        "To handle the promotions of the company and",
+                        "Its products or services around the world across",
+                        "All digital channels."
+                    ]
                 }
             ],
 
@@ -117,19 +147,34 @@ const en = {
                     "name": "Huang Minqiang",
                     "img": "huang",
                     "job": 'CEO of GXS Founder CEO',
-                    "introduce": "Minqiang has over 10 years’ experience in the field of data exchange and financial technology. He dived into cryptocurrency and blockchain since 2012 and initiated several projects. His expertise lies in the design of blockchain product economic models."
+                    "introduce": [
+                        "Minqiang has over 10 years’ experience in the field of data exchange and financial technology.",
+                        "He dived into cryptocurrency and blockchain since 2012 and initiated several projects. His",
+                        "expertise lies in the design of blockchain product economic models."
+                    ]
                 },
                 {
                     "name": "Tu Guojun",
                     "img": "tu",
                     "job": 'GXS co-founder VP',
-                    "introduce": "Hunan University Bachelor of Computer Successively held senior management positions in three listed IT companies Created many technology companies and had more than 21 years of internet,Business experience in payments, information security, and health,Blockchain depth researcher"
+                    "introduce": [
+                        "Hunan University Bachelor of Computer",
+                        "Successively held senior management positions in three listed IT companies",
+                        "Created many technology companies and had more than 21 years of internet,",
+                        "Business experience in payments, information security, and health,",
+                        "Blockchain depth researcher"
+                    ]
                 },
                 {
                     "name": "Ocean",
                     "job": '',
                     "img": "Ocean",
-                    "introduce": "Blockchain Senior Investors Digital Asset Fanatics Senior miner Continuous entrepreneurs"
+                    "introduce": [
+                        "Blockchain Senior Investors",
+                        "Digital Asset Fanatics",
+                        "Senior miner",
+                        "Continuous entrepreneurs"
+                    ]
                 }
             ],
 
@@ -145,8 +190,8 @@ const en = {
         "banner":{
             "h1":"Purchase Point Cards to get free LV tokens",
             "h2": "Purchase 1 Point cards to get 1 LV tokens",
-            "h3": "Scale Starts",
-            "h3-end": "Scale End",
+            "h3": "Sale Starts",
+            "h3-end": "Sale End",
             "days": "Days",
             "hours": "Hours",
             "minuter": "Minuter",

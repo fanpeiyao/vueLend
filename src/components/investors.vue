@@ -46,7 +46,7 @@ export default {
 }
 .investors .investors-content {
   display: flex;
-  padding: 10px 0 70px;
+  padding:0px 0 80px;
   width:1100px;
   margin: auto;
   justify-content: space-between;
@@ -133,13 +133,13 @@ export default {
   }
 }
 @media screen and (max-width: 414px) {
-    .investors>h1 {padding-top: 40px;
+    .investors>h1 {padding-top: 20px;
 }
   .investors .investors-content {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
   .investors .investors-content .investors-list {
     width: 70%;

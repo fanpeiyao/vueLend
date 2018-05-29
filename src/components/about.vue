@@ -30,7 +30,7 @@ export default {
   font-weight: 600;
 }
 .about .content {
-  padding-bottom: 40px;
+  padding-bottom:80px;
   width: 1100px;
   min-height: 200px;
   margin: auto;
@@ -49,7 +49,6 @@ export default {
   line-height: 22px;
   letter-spacing: 1px;
   color: #262626;
-  padding-top: 17px;
   padding-bottom: 19px;
 }
 .ablout {
@@ -77,6 +76,7 @@ export default {
   .content .content-text {
     padding-top: 0;
     font-size: 12px;
+     padding-bottom: 40px;
   }
     .ablout h1{
 

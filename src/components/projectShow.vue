@@ -126,10 +126,6 @@ export default {
 .projectShow > .pro-mobile .swiper-slide {
   text-align: center;
 }
-.projectShow > h1 {
-  padding-top: 80px;
-  padding-bottom: 58px;
-}
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 1000px) {
   .projectShow > .pro-web {
@@ -154,10 +150,10 @@ export default {
 }
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
-    .projectShow > h1 {
-    padding-top: 20px;
-    padding-bottom:20px;
-}
+
+ .projectShow > .pro-mobile>.swiper-container {
+     box-shadow: 0 8px 20px #ddd;
+  }
   .projectShow > .pro-web {
     display: none;
   }
