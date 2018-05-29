@@ -61,8 +61,8 @@
                         </a>
                     </el-card>
                 </swiper-slide>
-                <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
+                <div class="swiper-pagination" slot="pagination"></div>
         </div>
 
     </div>
@@ -178,13 +178,14 @@ export default {
 /*屏幕宽度小于768px时*/
 @media screen and (max-width: 414px) {
   .news {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   .news .news-slide {
     display: none;
   }
   .news .news-mobile {
     display: block;
+    position: relative;
     width: 100%;
   }
   .news .news-mobile .el-card {
@@ -192,6 +193,26 @@ export default {
     width: 80%;
   }
 
+  .news .news-mobile .swiper-pagination-bullets {
+    bottom: -40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .news .news-mobile .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 4px;
+    border: 1px solid #237eed;
+    background: #fff;
+    opacity: 0.6;
+  }
+  .news
+    .news-mobile
+    .swiper-pagination-bullets
+    .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #237eed;
+  }
   .news .news-mobile .el-card .el-card__body {
     padding: 0;
   }

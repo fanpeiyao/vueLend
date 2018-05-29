@@ -2,9 +2,11 @@
     <div class="bottom-vue">
         <h1 class=' text-center text-white'>Join Us</h1>
         <ul>
-            <li  v-for="(item, key) in bottomList" :key="key" @click="showCode">
-                <img :src='"static/image/"+item.code+".png"' alt="" class="code web_code">
-                <img :src='"static/image/"+item.code+".png"' alt="" class="code mobile_code" v-if="code && item.img == 'wechat'">
+            <li  v-for="(item, key) in bottomList" :key="key" @click="showCode(item.img)" :class="{'wechatLi':item.img == 'wechat'}">
+                <div v-if="item.img == 'wechat'">
+                    <img :src='"static/image/"+item.code+".png"' alt="" class="code web_code">
+                    <img :src='"static/image/"+item.code+".png"' alt="" class="code mobile_code" v-if="code && item.img == 'wechat'">
+                </div>
                 <a :href="item.path" target="blank">
                     <img :src='"static/image/"+item.img+".png"' alt="" class="icon">
                 </a>
@@ -35,8 +37,11 @@ export default {
   },
   computed: {},
   methods: {
-    showCode() {
-      this.code = !this.code;
+    showCode(flag) {
+        if (flag == 'wechat') {
+            this.code = !this.code;
+        }
+        return
     }
   },
   created() {}
@@ -93,7 +98,7 @@ export default {
   opacity: 0;
   display: none;
 }
-.bottom-vue ul li:hover img.web_code {
+.bottom-vue ul li.wechatLi:hover img.web_code {
   display: block;
   opacity: 1;
 }
@@ -130,7 +135,7 @@ export default {
   .bottom-vue ul li img.web_code {
     display: none;
   }
-  .bottom-vue ul li:hover img.web_code {
+  .bottom-vue ul li.wechatLi:hover img.web_code {
     display: none;
   }
   .bottom-vue ul li img.code {
