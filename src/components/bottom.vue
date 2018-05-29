@@ -2,13 +2,14 @@
     <div class="bottom-vue">
         <h1 class=' text-center text-white'>Join Us</h1>
         <ul>
-            <li  v-for="(item, key) in bottomList" :key="key" @click="showCode(item.img)" :class="{'wechatLi':item.img == 'wechat'}">
+            <li  v-for="(item, key) in bottomList" :key="key" :class="{'wechatLi':item.img == 'wechat'}">
                 <div v-if="item.img == 'wechat'">
                     <img :src='"static/image/"+item.code+".png"' alt="" class="code web_code">
                     <img :src='"static/image/"+item.code+".png"' alt="" class="code mobile_code" v-if="code && item.img == 'wechat'">
                 </div>
-                <a :href="item.path" target="blank">
-                    <img :src='"static/image/"+item.img+".png"' alt="" class="icon">
+
+                <a :href="item.path" target="blank" >
+                    <img :src='"static/image/"+item.img+".png"' alt="" class="icon" @click="showCode(item.img)" >
                 </a>
             </li>
         </ul>
@@ -41,7 +42,6 @@ export default {
         if (flag == 'wechat') {
             this.code = !this.code;
         }
-        return
     }
   },
   created() {}
@@ -121,6 +121,7 @@ export default {
   .bottom-vue ul {
     width: 90%;
     margin: auto;
+     margin-bottom: 20px;
   }
   .bottom-vue ul li {
     height: 30px;
