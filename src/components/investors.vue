@@ -133,13 +133,11 @@ export default {
   }
 }
 @media screen and (max-width: 414px) {
-    .investors>h1 {padding-top: 20px;
-}
   .investors .investors-content {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
   .investors .investors-content .investors-list {
     width: 70%;

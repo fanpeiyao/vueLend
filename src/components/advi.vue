@@ -54,10 +54,4 @@ export default {
   background: #f2f2f2;
   transition: all ease-out 0.3s;
 }
-
-@media screen and (max-width: 414px) {
-  .advi {
-    padding-bottom: 0;
-  }
-}
 </style>

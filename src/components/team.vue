@@ -160,7 +160,7 @@ export default {
     justify-content: center;
   }
   .team {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   .team .team-list.web {
     display: none;

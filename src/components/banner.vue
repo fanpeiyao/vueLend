@@ -626,7 +626,7 @@ export default {
     display: inline-block;
   }
   .banner-vue {
-    height: 800px;
+    height: 810px;
   }
 
   .el-dialog__body {

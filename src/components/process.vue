@@ -62,7 +62,7 @@ export default {
 }
 
 .plan .mobile {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   display: none;
 }
 
