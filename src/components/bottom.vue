@@ -26,7 +26,7 @@ export default {
     return {
       code: false,
       bottomList: [
-        { path: "https://trade.lendx.vip", img: "l" },
+        { path: "https://www.lendchain.io", img: "l" },
         { path: "https://weibo.com/lendchain", img: "weibo" },
         { img: "wechat", code: "l_ewm" },
         { path: "https://www.facebook.com/lendchain", img: "facebook" },
