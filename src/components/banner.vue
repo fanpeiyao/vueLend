@@ -442,6 +442,9 @@ export default {
   font-size: 54px;
   background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
 }
+.el-form-item.is-success {
+    border-color: #4886ff!important;
+}
 .banner-vue .header-inner .contentBox .timeBox .block::after {
   content: ":";
   position: absolute;
