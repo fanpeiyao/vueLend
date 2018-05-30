@@ -199,7 +199,6 @@ export default {
       this.$ajax
         .post("https://trade.lendx.vip/website/appoint", params)
         .then(res => {
-          console.log(res);
           if (res.data.code == "2000") {
             this.dialogEmail = false;
             this.eth = res.data.data;
