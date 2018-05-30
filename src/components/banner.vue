@@ -193,13 +193,13 @@ export default {
     },
 
     emailConfirm() {
-      var params = {
-        email: this.emailForm.email,
-        language: this.$i18n.locale
-      };
+      var params = new URLSearchParams();
+      params.append("email", this.emailForm.email);
+      params.append("language", this.$i18n.locale);
       this.$ajax
         .post("https://trade.lendx.vip/website/appoint", params)
         .then(res => {
+          console.log(res);
           if (res.data.code == "2000") {
             this.dialogEmail = false;
             this.eth = res.data.message;
@@ -210,11 +210,10 @@ export default {
         });
     },
     register() {
-      var params = {
-        email: this.registerForm.email,
-        address: this.registerForm.eth,
-        language: this.$i18n.locale
-      };
+      var params = new URLSearchParams();
+      params.append("email", this.registerForm.email);
+      params.append("address", this.registerForm.eth);
+      params.append("language", this.$i18n.locale);
       this.$ajax
         .post("https://trade.lendx.vip/website/join", params)
         .then(res => {
