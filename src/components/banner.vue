@@ -202,10 +202,10 @@ export default {
           console.log(res);
           if (res.data.code == "2000") {
             this.dialogEmail = false;
-            this.eth = res.data.message;
+            this.eth = res.data.data;
             this.dialogEth = true;
           } else {
-            this.returnMessage = res.data.data;
+            this.returnMessage = res.data.message;
           }
         });
     },
