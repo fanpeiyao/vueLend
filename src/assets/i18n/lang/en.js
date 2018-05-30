@@ -224,7 +224,8 @@ const en = {
                 "placeholderEmail": "Email address",
                 "success": "Successfully copied",
                 "confirm":"Copy Address",
-            }
+            },
+            "dialogEnd":"The activity has come to an end "
 
 
         }

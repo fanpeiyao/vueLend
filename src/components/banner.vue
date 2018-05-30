@@ -115,6 +115,9 @@
                 <el-button type="primary" @click="emailConfirm">{{this.$t("m.banner.confirm")}}</el-button>
             </span>
         </el-dialog>
+
+
+
     </div>
 </template>
 
@@ -182,6 +185,13 @@ export default {
       }, 1000);
     },
     getToken(n) {
+      if (n == "dialogEnd") {
+        this.$message({
+          type: "info",
+          message: this.$t("m.banner.dialogEnd")
+        });
+        return
+      }
       document
         .getElementsByClassName("el-dialog__header")[0]
         .classList.add("header-back");
@@ -265,12 +275,12 @@ export default {
             that.sale = this.$t("m.banner.h3-end");
             this.dialog = "dialogForm";
           } else if (nowTime >= endTime) {
-            that.days = "00";
-            that.hours = "00";
-            that.min = "00";
-            that.secs = "00";
-            that.sale = this.$t("m.banner.h3-end");
-            this.dialog = "dialogEmail";
+            this.days = "00";
+            this.hours = "00";
+            this.min = "00";
+            this.secs = "00";
+            this.sale = this.$t("m.banner.h3-end");
+            this.dialog = "dialogEnd";
           }
         }
       })
@@ -441,7 +451,7 @@ export default {
   background: linear-gradient(45deg, #4886ff 0%, #509fff 100%);
 }
 .el-form-item.is-success {
-    border-color: #4886ff!important;
+  border-color: #4886ff !important;
 }
 .banner-vue .header-inner .contentBox .timeBox .block::after {
   content: ":";
