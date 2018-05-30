@@ -201,8 +201,10 @@ export default {
         .then(res => {
           if (res.data.code == "2000") {
             this.dialogEmail = false;
-            this.eth = res.data.data;
-            this.dialogEth = true;
+            this.$message({
+              type: "info",
+              message: res.data.message
+            });
           } else {
             this.returnMessage = res.data.message;
           }
@@ -218,10 +220,8 @@ export default {
         .then(res => {
           if (res.data.code == "2000") {
             this.dialogForm = false;
-            this.$message({
-              type: "info",
-              message: res.data.message
-            });
+            this.eth = res.data.data;
+            this.dialogEth = true;
           } else {
             this.returnReg_msg = res.data.message;
           }
@@ -268,7 +268,6 @@ export default {
             that.days = "00";
             that.hours = "00";
             that.min = "00";
-            that.secs = "00";
             that.secs = "00";
             that.sale = this.$t("m.banner.h3-end");
             this.dialog = "dialogEmail";
